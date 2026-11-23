@@ -1,0 +1,483 @@
+<!DOCTYPE html> <!-- Declara el documento como HTML5 y activa el modo estándar del navegador -->
+<html lang="es"> <!-- Define el elemento raíz de la página e indica que el idioma del contenido es español -->
+<head> <!-- Contiene los metadatos, enlaces a fuentes, estilos y recursos no visibles en la página -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres para mostrar correctamente tildes, la letra ñ y caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta el ancho al dispositivo para diseño responsivo en móviles -->
+    <title>Horizonte Andino Tours | Expediciones y Turismo Responsable</title> <!-- Define el título de la pestaña en el navegador y los buscadores -->
+
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico"> <!-- Establece el icono pequeño visible en la pestaña del navegador -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Acelera la conexión previa con el servidor de fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Establece la conexión segura para descargar los archivos de tipografía -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet"> <!-- Importa la fuente Comfortaa con grosores normal, seminegrita y negrita -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- Vincula los iconos vectoriales de FontAwesome vía servidor externo CDN -->
+    <!---Enlazar el HTML con el favicon-->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/styles.css"> <!-- Conecta la hoja de estilos CSS externa que diseña toda la página -->
+    <link rel="stylesheet" href="assets/css/responsive.css"> 
+    <!-- ENLACE A LA HOJA DE ESTILOS DEL CARRUSEL (va dentro de <head>) -->
+    <link rel="stylesheet" href="assets/css/carrusel.css">
+</head>
+
+<body> <!-- Inicia el cuerpo del documento con todo el contenido visual de la página -->
+    
+
+    <!-- BARRA SUPERIOR INFORMATIVA (Top-Bar) -->
+    <div class="top-bar"> <!-- Contenedor de la barra superior oscura con datos de contacto rápido -->
+        <div class="container top-bar-content"> <!-- Centra y distribuye el contenido a los extremos con Flexbox -->
+            <div class="top-bar-info"> <!-- Agrupa el teléfono y correo con alineación horizontal y separación -->
+                <span><i class="fas fa-phone"></i> +51 914 732 427</span> <!-- Muestra el icono de teléfono y el número de atención -->
+                <span><i class="fas fa-envelope"></i> info@horizonteandino.com</span> <!-- Muestra el icono de sobre y el correo corporativo -->
+            </div>
+            <div class="top-bar-social"> <!-- Agrupa los accesos directos a redes sociales con Flexbox -->
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> <!-- Enlace seguro a la página de Facebook en pestaña nueva -->
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a> <!-- Enlace seguro a la página de Instagram en pestaña nueva -->
+                <a href="https://wa.me/51914732427" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a> <!-- Enlace al canal de WhatsApp con icono y accesibilidad para lectores -->
+            </div>
+        </div>
+    </div>
+
+<!-- CABECERA Y NAVEGACIÓN ADHESIVA (Sticky-Top) -->
+    <header class="header sticky-top"> <!-- Cabecera principal fijada arriba al hacer scroll gracias a position sticky -->
+        <div class="container"> <!-- Limita el ancho del contenido y lo centra horizontalmente en pantalla -->
+            <div class="row align-center"> <!-- Fila Flexbox que alinea el logotipo y la barra de navegación al centro -->              
+                      <a href="index.html" class="logo-link">
+                        <img src="assets/img/logo.png" alt="Horizonte Andino Tours" class="logo-ancho">
+                    </a>
+ <!-- Botón hamburguesa en tu <header> -->
+<button class="btn-hamburguesa" id="btn-menu" aria-label="Abrir menú" aria-expanded="false">
+    <i class="fas fa-bars"></i>
+</button>
+
+<!-- Contenedor de navegación -->
+<nav class="navegacion-principal" id="nav-menu">
+    <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+        <li><a href="paquetes.html" class="nav-link">Paquetes</a></li>
+        <li><a href="galeria.html" class="nav-link">Galería</a></li>
+        <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+    </ul>
+</nav>
+            </div>
+        </div>
+    </header>
+
+<main> <!-- Contenedor semántico del contenido temático central y único de la página -->
+
+    <!-- Objeto carrusel: Horizonte Andino Tours -->
+    <section id="carrusel">
+
+        <!-- Diapositiva 1: activa al cargar la página -->
+        <div class="diapositiva activa">
+            <img src="assets/img/fondo.jpg" alt="Aventura de trekking en nevado andino">
+            <div class="carrusel-texto">
+                <h2>Rutas de altura en los Andes</h2>
+                <p>Guías locales, seguridad y paisajes inolvidables en cada expedición.</p>
+                <a href="paquetes.html">Ver paquetes</a>
+            </div>
+        </div>
+
+        <!-- Diapositiva 2: circuito cultural y valles -->
+        <div class="diapositiva">
+            <img src="assets/img/fondo2.jpg" alt="Vista panoramica de valle y pueblo andino">
+            <div class="carrusel-texto">
+                <h2>Pueblos y valles con historia</h2>
+                <p>Recorre circuitos culturales con itinerarios pensados para ti.</p>
+                <a href="paquetes.html">Explorar rutas</a>
+            </div>
+        </div>
+
+        <!-- Diapositiva 3: reservas y contacto -->
+        <div class="diapositiva">
+            <img src="assets/img/fondo3.jpg" alt="Arquitectura tradicional en ruta andina">
+            <div class="carrusel-texto">
+                <h2>Planifica tu próxima salida</h2>
+                <p>Atención personalizada para viajeros individuales, parejas y grupos.</p>
+                <a href="contacto.html">Solicitar información</a>
+            </div>
+        </div>
+
+        <!-- Botón de desplazamiento "Anterior" -->
+        <button type="button" id="carrusel-anterior" class="carrusel-flecha">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Botón de desplazamiento "Siguiente" -->
+        <button type="button" id="carrusel-siguiente" class="carrusel-flecha">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <!-- Barra de indicadores (puntos) de paginación: el primero inicia activo -->
+        <div class="carrusel-indicadores">
+            <button type="button" class="carrusel-punto activo"></button>
+            <button type="button" class="carrusel-punto"></button>
+            <button type="button" class="carrusel-punto"></button>
+        </div>
+
+    </section>
+
+    <!-- Aquí continúa el resto de secciones de index.html -->
+
+<!-- SECCIÓN DE PROPUESTA DE VALOR -->
+        <section id="valores" class="padding-xl bg-light"> <!-- Sección de pilares con fondo claro alterno y padding vertical amplio -->
+            <div class="container"> <!-- Contenedor principal que centra y delimita el ancho máximo del bloque -->
+                <div class="text-centro"> <!-- Bloque para alinear el título y subtítulo de la sección al centro -->
+                    <h2>¿Por qué viajar con nosotros?</h2> <!-- Encabezado de nivel 2 para captar la atención sobre los beneficios -->
+                    <p class="card-text">Nuestra propuesta y compromiso en cada expedición</p> <!-- Subtítulo de apoyo explicativo -->
+                </div>
+                <div class="row"> <!-- Fila Flexbox que agrupa y distribuye las 3 tarjetas de valor con espacio entre sí -->
+                    <div class="col"> <!-- Columna flexible para la primera tarjeta de propuesta -->
+                        <div class="card tarjeta-valor text-centro"> <!-- Tarjeta con efecto hover interactivo de elevación vertical -->
+                            <div class="card-body"> <!-- Contenedor interno flexible que distribuye el icono, título y descripción -->
+                                <i class="fas fa-shield-alt fa-2x icon-valor"></i> <!-- Icono de escudo de FontAwesome con tamaño aumentado -->
+                                <h3 class="card-title">Seguridad Garantizada</h3> <!-- Título de nivel 3 del primer pilar de la empresa -->
+                                <p class="card-text">Protocolos de primeros auxilios y monitoreo satelital en todas nuestras rutas de alta montaña.</p> <!-- Texto explicativo sobre los protocolos de seguridad -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col"> <!-- Columna flexible para la segunda tarjeta de propuesta -->
+                        <div class="card tarjeta-valor text-centro"> <!-- Tarjeta con fondo suave, borde y elevación sutil al pasar el cursor -->
+                            <div class="card-body"> <!-- Espaciado interno acolchado para organizar el contenido -->
+                                <i class="fas fa-seedling fa-2x icon-valor"></i> <!-- Icono de brote ecológico que simboliza sostenibilidad -->
+                                <h3 class="card-title">Turismo Responsable</h3> <!-- Título de nivel 3 para el pilar medioambiental y social -->
+                                <p class="card-text">Apoyo directo a las comunidades andinas y respeto absoluto por las áreas naturales protegidas.</p> <!-- Texto explicativo del compromiso comunitario y natural -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col"> <!-- Columna flexible para la tercera tarjeta de propuesta -->
+                        <div class="card tarjeta-valor text-centro"> <!-- Tarjeta con estructura flexible y transición visual suave -->
+                            <div class="card-body"> <!-- Cuerpo interior de la tarjeta con espaciado consistente -->
+                                <i class="fas fa-compass fa-2x icon-valor"></i> <!-- Icono de brújula que representa orientación y guía -->
+                                <h3 class="card-title">Guías Expertos</h3> <!-- Título de nivel 3 para el pilar de personal capacitado -->
+                                <p class="card-text">Personal local certificado con amplio dominio de senderos, historia y cultura viva.</p> <!-- Texto que detalla la experiencia del personal local -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- SERVICIOS: PAQUETES TURÍSTICOS -->
+        <section id="paquetes" class="padding-xl"> <!-- Sección principal de paquetes turísticos con espaciado vertical de 80px -->
+            <div class="container"> <!-- Limita el contenido al ancho máximo de 1200px y lo centra en la ventana -->
+                <div class="text-centro"> <!-- Contenedor de texto para alinear el título y la descripción al medio -->
+                    <h2>Paquetes Populares</h2> <!-- Encabezado de nivel 2 representativo de la sección de servicios -->
+                    <p class="card-text">Rutas seleccionadas para vivir lo mejor del senderismo y la cultura</p> <!-- Subtítulo descriptivo que contextualiza los recorridos -->
+                </div>
+                <div class="row"> <!-- Fila Flexbox que agrupa y alinea las tres tarjetas de paquetes con separación continua -->
+                    <div class="col"> <!-- Columna flexible adaptable para la primera tarjeta de tour -->
+                        <div class="card"> <!-- Tarjeta contenedora con disposición en columna para mantener alturas parejas -->
+                            <img src="assets/img/trekking.jpg" alt="Trekking en la cordillera" class="img-tarjeta"> <!-- Fotografía del tour con altura fija y ajuste object-fit cover sin distorsión -->
+                            <div class="card-body text-centro"> <!-- Cuerpo interior flexible de la tarjeta con alineación de texto al centro -->
+                                <h3 class="card-title">Trekking Nevados</h3> <!-- Título de nivel 3 con el nombre específico de la ruta -->
+                                <p class="card-text">3 días de aventura cruzando abras andinas y lagunas turquesas con campamentos equipados.</p> <!-- Resumen de la experiencia que se expande para empujar el botón -->
+                                <a href="#formulario" class="btn">Reservar Cupo</a> <!-- Enlace de acción con estilo de botón que desplaza al formulario de reserva -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col"> <!-- Columna flexible adaptable para la segunda tarjeta de tour -->
+                        <div class="card"> <!-- Tarjeta con bordes redondeados y estructura vertical unificada -->
+                            <img src="assets/img/tejedora.jpg" alt="Comunidad textil andina" class="img-tarjeta"> <!-- Fotografía de la actividad textil adaptada al ancho total de la tarjeta -->
+                            <div class="card-body text-centro"> <!-- Bloque interno con padding de 25px para espaciar el texto y el botón -->
+                                <h3 class="card-title">Ruta Textil y Comunitaria</h3> <!-- Título de nivel 3 para el paquete de turismo vivencial -->
+                                <p class="card-text">Convive con artesanas de telares tradicionales y aprende técnicas milenarias de teñido natural.</p> <!-- Descripción del itinerario cultural y comunitario -->
+                                <a href="#formulario" class="btn">Reservar Cupo</a> <!-- Botón interactivo con efecto hover suave para iniciar la reserva -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col"> <!-- Columna flexible adaptable para la tercera tarjeta de tour -->
+                        <div class="card"> <!-- Tarjeta de servicio con fondo cálido y borde definido -->
+                            <img src="assets/img/gastronomia.jpg" alt="Platos típicos andinos" class="img-tarjeta"> <!-- Fotografía culinaria optimizada para encajar sin deformarse -->
+                            <div class="card-body text-centro"> <!-- Contenedor de contenido textual con alineación centrada -->
+                                <h3 class="card-title">Experiencia Gastronómica</h3> <!-- Título de nivel 3 enfocado en el recorrido culinario -->
+                                <p class="card-text">Degustación de insumos nativos, hierbas aromáticas y comida ancestral en valles sagrados.</p> <!-- Descripción del servicio de cata e historia gastronómica -->
+                                <a href="#formulario" class="btn">Reservar Cupo</a> <!-- Botón de llamada a la acción enlazado al formulario de contacto -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- TABLA COMPARATIVA DE TARIFAS -->
+<section id="tarifas" class="padding-xl bg-light"> <!-- Sección de precios con fondo claro alterno y padding vertical amplio -->
+    <div class="container"> <!-- Limita el ancho a 1200px y centra la sección en la pantalla -->
+        <div class="text-centro"> <!-- Centra horizontalmente el título y subtítulo de la tabla -->
+            <h2>Tarifas y Comparativa de Expediciones</h2> <!-- Encabezado de nivel 2 para la comparativa económica -->
+            <p class="card-text">Detalle de duración, dificultad y costos por persona</p> <!-- Subtítulo informativo sobre el contenido de la tabla -->
+        </div>
+        <div class="table-responsive"> <!-- Contenedor con scroll horizontal para evitar desbordes en celulares -->
+            <table class="tbl-tarifas"> <!-- Tabla con bordes unificados (border-collapse) y estilos corporativos -->
+                <thead> <!-- Define el encabezado estructural de la tabla -->
+                    <tr> <!-- Fila contenedora de los títulos de las columnas -->
+                        <th>Paquete</th> <!-- Columna del nombre del paquete con fondo marrón y texto blanco -->
+                        <th>Duración</th> <!-- Columna para el tiempo estimado del recorrido -->
+                        <th>Dificultad</th> <!-- Columna que indica el nivel físico requerido -->
+                        <th>Guía Incluido</th> <!-- Columna para confirmar el servicio de guía -->
+                        <th>Precio (PEN)</th> <!-- Columna del costo en moneda nacional peruana -->
+                    </tr>
+                </thead>
+                <tbody> <!-- Contenedor del cuerpo con los datos de las tarifas -->
+                    <tr> <!-- Primera fila de datos con efecto hover interactivo -->
+                        <td>Aventura de Trekking Andino</td> <!-- Nombre del primer tour ofertado -->
+                        <td>3 Días / 2 Noches</td> <!-- Duración del servicio de caminata -->
+                        <td>Intermedio - Alto</td> <!-- Exigencia física del itinerario -->
+                        <td><i class="fas fa-check text-check"></i> Sí</td> <!-- Icono de verificación verde de FontAwesome y texto afirmativo -->
+                        <td>S/ 480.00</td> <!-- Monto oficial del paquete en soles -->
+                    </tr>
+                    <tr> <!-- Segunda fila con fondo alterno tipo cebra para facilitar la lectura -->
+                        <td>Inmersión Cultural Textil</td> <!-- Nombre del segundo tour ofertado -->
+                        <td>2 Días / 1 Noche</td> <!-- Duración de la estadía comunitaria -->
+                        <td>Bajo</td> <!-- Nivel accesible para todo público -->
+                        <td><i class="fas fa-check text-check"></i> Sí</td> <!-- Icono de check verde que confirma guía incluido -->
+                        <td>S/ 320.00</td> <!-- Monto oficial de la experiencia cultural -->
+                    </tr>
+                    <tr> <!-- Tercera fila de datos con resaltado suave al pasar el cursor -->
+                        <td>Tour Gastronómico Andino</td> <!-- Nombre del recorrido culinario -->
+                        <td>1 Día Completo</td> <!-- Duración de la jornada completa -->
+                        <td>Fácil</td> <!-- Nivel de esfuerzo bajo para toda la familia -->
+                        <td><i class="fas fa-check text-check"></i> Sí</td> <!-- Confirmación visual con icono de FontAwesome -->
+                        <td>S/ 180.00</td> <!-- Precio unitario por persona en soles -->
+                    </tr>
+                    <tr> <!-- Cuarta fila de datos con ruta de lagunas de altura -->
+                        <td>Ruta de Lagunas Turquesas</td> <!-- Nombre del cuarto tour ofertado -->
+                        <td>2 Días / 1 Noche</td> <!-- Duración de la travesía hacia las lagunas -->
+                        <td>Intermedio</td> <!-- Exigencia física moderada por altitud -->
+                        <td><i class="fas fa-check text-check"></i> Sí</td> <!-- Confirmación visual de guía especializado incluido -->
+                        <td>S/ 390.00</td> <!-- Tarifa por persona en soles peruanos -->
+                    </tr>
+                    <tr> <!-- Quinta fila de datos con circuito histórico y miradores -->
+                        <td>Expedición Valles y Miradores</td> <!-- Nombre del quinto tour ofertado -->
+                        <td>4 Días / 3 Noches</td> <!-- Duración total de la expedición -->
+                        <td>Intermedio - Alto</td> <!-- Nivel de resistencia recomendado para la ruta -->
+                        <td><i class="fas fa-check text-check"></i> Sí</td> <!-- Icono de verificación de guía incluido -->
+                        <td>S/ 650.00</td> <!-- Monto total por persona en soles -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- RECURSOS MULTIMEDIA -->
+        <section id="multimedia" class="padding-xl"> <!-- Sección de contenido audiovisual con espaciado vertical de 80px -->
+            <div class="container"> <!-- Centra el contenido en pantalla y mantiene el ancho estándar de 1200px -->
+                <div class="text-centro"> <!-- Bloque de alineación centrada para los encabezados de la sección -->
+                    <h2>Experiencias en Video</h2> <!-- Título de nivel 2 para la muestra de material audiovisual -->
+                    <p class="card-text">Conoce nuestras rutas y paisajes andinos en video</p> <!-- Subtítulo de apoyo descriptivo -->
+                </div>
+                <div class="row"> <!-- Fila Flexbox que coloca el video local y el iframe lado a lado con separación -->
+                    <!-- Video local MP4 -->
+                    <div class="col"> <!-- Columna flexible adaptable para la reproducción de video local -->
+                        <div class="card tarjeta-video"> <!-- Tarjeta con borde y fondo blanco para enmarcar el video -->
+                            <div class="card-body"> <!-- Contenedor interior con padding consistente para la información del video -->
+                                <h3 class="card-title">Video Local</h3> <!-- Título de nivel 3 que identifica el origen del recurso -->
+                                <p class="card-text">Impresionante vista panorámica de aventureros en la cima de los Andes peruanos.</p> <!-- Párrafo descriptivo del contenido del video local -->
+                                <video controls muted class="video-local"> <!-- Reproductor HTML5 con controles visibles y silenciado por defecto -->
+                                    <source src="assets/vid/video-local.mp4" type="video/mp4"> <!-- Ruta relativa corregida al archivo MP4 local -->
+                                    Tu navegador no soporta el formato de video. <!-- Mensaje alternativo accesible en caso de incompatibilidad -->
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video YouTube con iframe -->
+                    <div class="col"> <!-- Columna flexible adaptable para el reproductor incrustado de YouTube -->
+                        <div class="card tarjeta-video"> <!-- Tarjeta con esquinas redondeadas para el contenedor del iframe -->
+                            <div class="card-body"> <!-- Estructura interna flexible para organizar el título y el reproductor -->
+                                <h3 class="card-title">Documental Andino</h3> <!-- Título de nivel 3 del material externo -->
+                                <p class="card-text">Un viaje al corazón de los Andes que rescata las tradiciones incas, la sabiduría de la comunidad Q'ero y el respeto por la Pachamama.</p> <!-- Descripción del contenido emitido desde YouTube -->
+                                <div class="contenedor-iframe"> <!-- Envoltorio contenedor para mantener el ancho y evitar deformaciones -->
+                                    <iframe 
+                                        class="video-fluid" 
+                                        width="560" height="315" src="https://www.youtube.com/embed/QEKtWJ7fgsM?si=HvB-P7hzUgIwyz0j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <!-- Marco incrustado de YouTube con políticas de origen y permisos de pantalla completa -->
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- GALERÍA MULTIFILA CON FLEXBOX -->
+        <section id="galeria" class="padding-xl bg-light"> <!-- Sección de galería visual con fondo claro alterno y padding vertical amplio -->
+            <div class="container"> <!-- Limita el ancho del contenido a 1200px y lo centra en la ventana -->
+                <div class="text-centro"> <!-- Bloque de alineación centrada para el encabezado y texto descriptivo -->
+                    <h2>Galería de Destinos</h2> <!-- Título de nivel 2 para la muestra fotográfica de destinos -->
+                    <p class="card-text">Recuerdos y momentos capturados en la ruta</p> <!-- Subtítulo explicativo que acompaña al título -->
+                </div>
+                <div class="galeria-flex"> <!-- Contenedor flexible multifila con salto de línea (wrap) y espacio entre elementos -->
+                    <div class="galeria-item"> <!-- Marco individual de foto con bordes redondeados y recorte overflow hidden -->
+                        <img class="img-cuadro" src="assets/img/destinos1.jpg" alt="Aventura trekking en nevado"> <!-- Imagen con altura fija, cover sin distorsión y zoom interactivo al hover -->
+                    </div>
+                    <div class="galeria-item"> <!-- Segundo elemento de la cuadrícula flexible con ancho base adaptable -->
+                        <img class="img-cuadro" src="assets/img/destinos2.jpg" alt="Ruta de alta montaña"> <!-- Imagen de paisaje de altura con animación suave de escala -->
+                    </div>
+                    <div class="galeria-item"> <!-- Tercer marco de la cuadrícula con sombra suave y proporción equilibrada -->
+                        <img class="img-cuadro" src="assets/img/destinos3.jpg" alt="Inmersión cultural y textil"> <!-- Imagen cultural con ajuste automático al ancho del contenedor -->
+                    </div>
+                    <div class="galeria-item"> <!-- Cuarto elemento del mosaico con comportamiento fluido en varias pantallas -->
+                        <img class="img-cuadro" src="assets/img/destinos4.jpg" alt="Gastronomía local andina"> <!-- Fotografía gastronómica optimizada para encajar sin deformarse -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- TESTIMONIOS -->
+        <section id="testimonios" class="padding-xl"> <!-- Sección de opiniones de clientes con espaciado vertical de 80px -->
+            <div class="container"> <!-- Centra el contenido en pantalla y conserva el ancho estándar de 1200px -->
+                <div class="text-centro"> <!-- Bloque de alineación centrada para el encabezado y texto descriptivo -->
+                    <h2>Lo que dicen nuestros viajeros</h2> <!-- Encabezado de nivel 2 para la sección de prueba social -->
+                    <p class="card-text">Experiencias reales de quienes exploraron los Andes con nosotros</p> <!-- Subtítulo explicativo que contextualiza los testimonios -->
+                </div>
+                <div class="row"> <!-- Fila Flexbox que distribuye las tres tarjetas de testimonio con separación continua -->
+                    <div class="col"> <!-- Columna flexible que reparte el ancho equitativamente con las demás -->
+                        <div class="card tarjeta-testimonio"> <!-- Tarjeta con fondo beige cálido y alineación de texto centrada -->
+                            <div class="card-body"> <!-- Estructura interna flexible para albergar la cita y la firma -->
+                                <p class="card-text">"El trekking por el nevado fue inolvidable. Los guías siempre atentos a nuestra seguridad y con un conocimiento increíble."</p> <!-- Cita textual con la reseña de la experiencia -->
+                                <h4 class="card-title autor-testimonio">— Carlos Mendoza</h4> <!-- Encabezado de nivel 4 con el nombre del cliente en negrita -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col"> <!-- Segunda columna flexible para el testimonio de inmersión cultural -->
+                        <div class="card tarjeta-testimonio"> <!-- Tarjeta con borde suave y diseño coherente con la paleta de colores -->
+                            <div class="card-body"> <!-- Espaciado interno acolchado para mantener ordenado el testimonio -->
+                                <p class="card-text">"La experiencia cultural con las tejedoras me cambió la perspectiva. Una organización impecable y respetuosa con las comunidades."</p> <!-- Comentario del cliente sobre el impacto comunitario -->
+                                <h4 class="card-title autor-testimonio">— Sofía Valdivia</h4> <!-- Título de nivel 4 que acredita la autoría de la reseña -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col"> <!-- Tercera columna flexible para el testimonio de la ruta gastronómica -->
+                        <div class="card tarjeta-testimonio"> <!-- Tarjeta contenedora con altura pareja dentro de la fila Flexbox -->
+                            <div class="card-body"> <!-- Bloque flexible que asegura la correcta lectura del contenido -->
+                                <p class="card-text">"El tour gastronómico superó todas mis expectativas. Comida deliciosa, paisajes únicos y un grupo muy unido."</p> <!-- Comentario del cliente sobre la vivencia culinaria -->
+                                <h4 class="card-title autor-testimonio">— Daniel Huamán</h4> <!-- Firma de nivel 4 que identifica al tercer viajero -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- FORMULARIO DE CONTACTO Y RESERVAS -->
+        <section id="formulario" class="padding-xl"> <!-- Sección de contacto con espaciado vertical de 80px -->
+            <div class="container"> <!-- Limita el ancho del formulario a 1200px y lo centra en la página -->
+                <div class="text-centro"> <!-- Contenedor para alinear el título y subtítulo al centro -->
+                    <h2>Contáctanos</h2> <!-- Encabezado de nivel 2 para la llamada al contacto del usuario -->
+                    <p class="card-text">Escríbenos y planificaremos tu próxima ruta por los Andes</p> <!-- Subtítulo de apoyo para incentivar la reserva -->
+                </div>
+
+                <form class="contacto-form" action="#" method="post"> <!-- Formulario estructurado para enviar datos por método POST -->
+                    <div class="form-flex"> <!-- Contenedor Flexbox para crear una cuadrícula responsiva de dos columnas -->
+                        <div class="form-50"> <!-- Elemento flexible que ocupa el 50% del ancho del formulario -->
+                            <label for="tipo-servicio" class="form-label">Tipo de Consulta *</label> <!-- Etiqueta accesible vinculada al menú de selección -->
+                            <select id="tipo-servicio" name="tipo_servicio" class="form-control" required> <!-- Lista desplegable obligatoria para categorizar el mensaje -->
+                                <option value="">Seleccione una opción</option> <!-- Opción inicial por defecto no seleccionable como valor final -->
+                                <option value="informacion">Información General</option> <!-- Opción para dudas generales del cliente -->
+                                <option value="reserva">Reserva de Paquete</option> <!-- Opción para agendar un tour específico -->
+                                <option value="personalizado">Expedición Personalizada</option> <!-- Opción para itinerarios turísticos a medida -->
+                                <option value="sugerencia">Sugerencias</option> <!-- Opción para recibir retroalimentación del servicio -->
+                            </select>
+                        </div>
+
+                        <div class="form-50"> <!-- Contenedor flexible de media anchura para el nombre del usuario -->
+                            <label for="nombre" class="form-label">Nombre Completo *</label> <!-- Etiqueta descriptiva para el campo de nombre -->
+                            <input id="nombre" name="nombre" class="form-control" type="text" placeholder="Ej. Miguel Canaza" required> <!-- Campo de texto obligatorio con guía de ejemplo -->
+                        </div>
+
+                        <div class="form-50"> <!-- Contenedor flexible de media anchura para el correo electrónico -->
+                            <label for="correo" class="form-label">Correo Electrónico *</label> <!-- Etiqueta descriptiva para la dirección de correo -->
+                            <input id="correo" name="correo" class="form-control" type="email" placeholder="correo@ejemplo.com" required> <!-- Campo con validación nativa de formato de correo obligatorio -->
+                        </div>
+
+                        <div class="form-50"> <!-- Contenedor flexible de media anchura para el número telefónico -->
+                            <label for="telefono" class="form-label">Teléfono Móvil *</label> <!-- Etiqueta para el teléfono de contacto -->
+                            <input id="telefono" name="telefono" class="form-control" type="tel" placeholder="+51 987 654 321" required> <!-- Campo para número telefónico obligatorio optimizado para teclados móviles -->
+                        </div>
+
+                        <div class="form-100"> <!-- Elemento flexible que abarca el 100% del ancho del formulario -->
+                            <label for="mensaje" class="form-label">Mensaje o Detalle del Viaje *</label> <!-- Etiqueta descriptiva para el área de mensaje largo -->
+                            <textarea id="mensaje" name="mensaje" class="form-control form-noresize" rows="4" placeholder="Indica fecha estimada, número de viajeros y destinos de interés..." required></textarea> <!-- Área de texto multilinea sin redimensionamiento manual para no romper el diseño -->
+                        </div>
+
+                        <div class="form-100 form-checkbox"> <!-- Fila al 100% que alinea horizontalmente la casilla de verificación y su texto -->
+                            <input type="checkbox" id="terminos" name="terminos" required> <!-- Casilla de verificación obligatoria para validar el consentimiento legal -->
+                            <label for="terminos">Acepto las políticas de reserva y términos del servicio.</label> <!-- Etiqueta clicable asociada directamente al checkbox -->
+                        </div>
+
+                        <div class="form-100"> <!-- Fila final al 100% para posicionar el botón de envío -->
+                            <button type="submit" class="btn btn-submit">Enviar Consulta</button> <!-- Botón de envío que procesa el formulario con ancho completo y estilos hover -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main> <!-- Cierre del contenedor principal con todo el contenido central de la página web -->
+
+<!-- PIE DE PÁGINA -->
+    <footer id="pie" class="padding-xl"> <!-- Pie de página semántico con fondo marrón corporativo y padding vertical amplio -->
+        <div class="container"> <!-- Limita el contenido a 1200px y lo centra horizontalmente en pantalla -->
+            <div class="row footer-grid"> <!-- Fila Flexbox que separa y distribuye las tres columnas del footer -->
+                <div class="col footer-col"> <!-- Primera columna flexible para la reseña informativa de la empresa -->
+                    <h3 class="footer-titulo">Horizonte Andino Tours</h3> <!-- Encabezado de nivel 3 con el nombre de la marca alineado a la izquierda -->
+                    <p class="footer-texto"> <!-- Párrafo con texto blanco y altura de línea cómoda para fácil lectura -->
+                        Conectamos viajeros de todo el mundo con la riqueza cultural, histórica y natural de los Andes peruanos de forma segura y responsable.
+                    </p>
+                </div>
+
+                <div class="col footer-col"> <!-- Segunda columna flexible para el menú de navegación rápida -->
+                    <h3 class="footer-titulo">Enlaces Rápidos</h3> <!-- Encabezado de nivel 3 para la lista de enlaces de interés -->
+                    <ul class="footer-menu"> <!-- Lista sin viñetas por defecto para los accesos directos -->
+                        <li><a href="#explorar"><i class="fas fa-chevron-right"></i> Inicio</a></li> <!-- Enlace directo con icono de flecha hacia el banner de portada -->
+                        <li><a href="#nosotros"><i class="fas fa-chevron-right"></i> Sobre Nosotros</a></li> <!-- Enlace con icono hacia la sección de presentación corporativa -->
+                        <li><a href="#paquetes"><i class="fas fa-chevron-right"></i> Paquetes Turísticos</a></li> <!-- Enlace con icono hacia el catálogo de rutas -->
+                        <li><a href="#tarifas"><i class="fas fa-chevron-right"></i> Tabla de Tarifas</a></li> <!-- Enlace con icono hacia la comparativa de precios -->
+                        <li><a href="#formulario"><i class="fas fa-chevron-right"></i> Contacto y Reservas</a></li> <!-- Enlace con icono hacia el formulario de contacto -->
+                    </ul>
+                </div>
+
+                <div class="col footer-col"> <!-- Tercera columna flexible para los datos directos de contacto físico y digital -->
+                    <h3 class="footer-titulo">Contáctanos</h3> <!-- Encabezado de nivel 3 para los canales oficiales de atención -->
+                    <p class="footer-contacto"> <!-- Párrafo que contiene el enlace de llamada directa con icono -->
+                        <i class="fas fa-phone"></i> 
+                        <a href="tel:+51905435005">+51 914 732 427</a> <!-- Protocolo tel para iniciar llamadas directas desde teléfonos móviles -->
+                    </p>
+                    <p class="footer-contacto"> <!-- Párrafo que contiene el enlace de correo con icono de sobre -->
+                        <i class="fas fa-envelope"></i> 
+                        <a href="mailto:info@horizonteandino.com">info@horizonteandino.com</a> <!-- Protocolo mailto para abrir el gestor de correo predeterminado -->
+                    </p>
+                    <p class="footer-contacto"> <!-- Párrafo con la ubicación física y el icono de marcador geográfico -->
+                        <i class="fas fa-map-marker-alt"></i> Av. Universitaria 123, Lima <!-- Dirección de la sede local de atención al cliente -->
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom"> <!-- Barra inferior flexible separada por un borde superior tenue y espacio entre extremos -->
+                <div class="footer-copy"> <!-- Texto legal del aviso de derechos reservados con entidad tipográfica copyright -->
+                    &copy; 2026 - Horizonte Andino Tours. Todos los derechos reservados.
+                </div>
+                <div class="footer-rs"> <!-- Contenedor Flexbox horizontal para los accesos a redes sociales en el footer -->
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> <!-- Enlace seguro a Facebook con icono vectorial y accesibilidad -->
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a> <!-- Enlace seguro a Instagram con icono vectorial y accesibilidad -->
+                    <a href="https://wa.me/51914732427" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a> <!-- Enlace directo al chat de WhatsApp -->
+            </div>
+        </div>
+    </footer>
+
+    <!--VOLVER ARRIBA-->
+    <a class="scroll-up" href="#" title="Volver arriba">
+        <i class="fa-solid fa-angle-up"></i>
+    </a>
+
+    <!--ENLAZAR CON Javascript-->
+    <script src="assets/js/main.js"></script>
+    <!-- SCRIPT DEL CARRUSEL (va justo antes de cerrar </body>) -->
+    <script src="assets/js/carrusel.js"></script>
+
+</body> <!-- Cierre del cuerpo visible de la página -->
+</html> <!-- Cierre del elemento raíz del documento HTML -->

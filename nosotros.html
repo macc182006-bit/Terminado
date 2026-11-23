@@ -1,0 +1,252 @@
+<!DOCTYPE html> <!-- Declara el documento como HTML5 y activa el modo estándar del navegador -->
+<html lang="es"> <!-- Define el elemento raíz de la página e indica que el idioma del contenido es español -->
+
+<head> <!-- Contiene los metadatos, enlaces a fuentes, estilos y recursos no visibles en la página -->
+    <meta charset="UTF-8">
+    <!-- Define la codificación de caracteres para mostrar correctamente tildes, la letra ñ y caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajusta el ancho al dispositivo para diseño responsivo en móviles -->
+    <title>Horizonte Andino Tours | Nosotros</title>
+    <!-- Define el título de la pestaña en el navegador y los buscadores -->
+
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Establece el icono pequeño visible en la pestaña del navegador -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Acelera la conexión previa con el servidor de fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Establece la conexión segura para descargar los archivos de tipografía -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Importa la fuente Comfortaa con grosores normal, seminegrita y negrita -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Vincula los iconos vectoriales de FontAwesome vía servidor externo CDN -->
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Conecta las hojas de estilos CSS externas que diseñan toda la página -->
+</head>
+
+<body> <!-- Inicia el cuerpo del documento con todo el contenido visual de la página -->
+    <!-- BARRA SUPERIOR INFORMATIVA (Top-Bar) -->
+    <div class="top-bar"> <!-- Contenedor de la barra superior oscura con datos de contacto rápido -->
+        <div class="container top-bar-content"> <!-- Centra y distribuye el contenido a los extremos con Flexbox -->
+            <div class="top-bar-info"> <!-- Agrupa el teléfono y correo con alineación horizontal y separación -->
+                <span><i class="fas fa-phone"></i> +51 914 732 427</span>
+                <!-- Muestra el icono de teléfono y el número de atención -->
+                <span><i class="fas fa-envelope"></i> info@horizonteandino.com</span>
+                <!-- Muestra el icono de sobre y el correo corporativo -->
+            </div>
+            <div class="top-bar-social"> <!-- Agrupa los accesos directos a redes sociales con Flexbox -->
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+                <!-- Enlace seguro a la página de Facebook en pestaña nueva -->
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <!-- Enlace seguro a la página de Instagram en pestaña nueva -->
+                <a href="https://wa.me/51914732427" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i
+                        class="fab fa-whatsapp"></i></a>
+                <!-- Enlace al canal de WhatsApp con icono y accesibilidad para lectores -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CABECERA Y NAVEGACIÓN ADHESIVA (Sticky-Top) -->
+    <header class="header sticky-top">
+        <!-- Cabecera principal fijada arriba al hacer scroll gracias a position sticky -->
+        <div class="container"> <!-- Limita el ancho del contenido y lo centra horizontalmente en pantalla -->
+            <div class="row align-center">
+                <!-- Fila Flexbox que alinea el logotipo y la barra de navegación al centro -->
+                <a href="index.html" class="logo-link">
+                    <img src="assets/img/logo.png" alt="Horizonte Andino Tours" class="logo-ancho">
+                </a>
+                <!-- Imagen del logotipo oficial con texto alternativo de accesibilidad -->
+
+                <!-- Botón hamburguesa en el <header> para dispositivos móviles -->
+                <button class="btn-hamburguesa" id="btn-menu" aria-label="Abrir menú" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Contenedor de navegación principal -->
+                <nav class="navegacion-principal" id="nav-menu">
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Inicio</a></li>
+                        <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li><a href="paquetes.html" class="nav-link">Paquetes</a></li>
+                        <li><a href="galeria.html" class="nav-link">Galería</a></li>
+                        <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- TÍTULO DE LA PÁGINA -->
+        <section class="titulo-pag">
+            <div class="container">
+                <h1>Nosotros</h1>
+                <p>Conoce más sobre nosotros</p>
+                <nav>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="index.html" title="Inicio">Inicio</a> / Nosotros
+                </nav>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE PRESENTACIÓN: NOSOTROS -->
+        <section id="nosotros" class="padding-xl">
+            <div class="container">
+                <div class="row align-center">
+                    <div class="col">
+                        <img src="assets/img/nosotros.jpg" alt="Guías de montaña en los Andes" class="img-nosotros">
+                    </div>
+                    <div class="col">
+                        <h2>Pasión por la Montaña y la Cultura Viva</h2>
+                        <p class="card-text">
+                            En Horizonte Andino Tours organizamos expediciones responsables que conectan a viajeros del
+                            mundo con comunidades locales y rutas de senderismo de alta montaña.
+                        </p>
+                        <p class="card-text">
+                            Priorizamos la seguridad, el respeto medioambiental y el impacto económico positivo en los
+                            pueblos que nos acogen.
+                        </p>
+                        <!-- Botón que desplaza suavemente hacia la sección #compromisos en esta misma página -->
+                        <a href="#compromisos" class="btn">Nuestros Compromisos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DESTINO DEL BOTÓN: NUESTROS COMPROMISOS -->
+        <section id="compromisos" class="padding-xl bg-light"> <!-- Destino del ancla #compromisos -->
+            <div class="container"> <!-- Limita el contenido al ancho máximo de 1200px y lo centra -->
+                <div class="text-centro"> <!-- Centra el encabezado introductorio de los compromisos -->
+                    <h2>Nuestros Compromisos</h2> <!-- Título principal de la sección -->
+                    <p class="card-text">Pilares que guían cada expedición y experiencia cultural en los Andes</p>
+                </div>
+
+                <div class="row"> <!-- Fila Flexbox que alinea las tres tarjetas de compromisos -->
+                    <div class="col"> <!-- Primera columna: Seguridad -->
+                        <div class="card"> <!-- Tarjeta con diseño uniforme -->
+                            <div class="card-body text-centro"> <!-- Contenido centrado -->
+                                <i class="fa-solid fa-shield-halved fa-2x" style="color: #8c6239; margin-bottom: 12px;"></i>
+                                <h3 class="card-title">Seguridad en Alta Montaña</h3>
+                                <p class="card-text">Guías certificados, aclimatación progresiva, botiquín de primeros auxilios y seguimiento permanente en ruta.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col"> <!-- Segunda columna: Medioambiente -->
+                        <div class="card"> <!-- Tarjeta con diseño uniforme -->
+                            <div class="card-body text-centro"> <!-- Contenido centrado -->
+                                <i class="fa-solid fa-leaf fa-2x" style="color: #8c6239; margin-bottom: 12px;"></i>
+                                <h3 class="card-title">Cuidado Ambiental</h3>
+                                <p class="card-text">Operamos bajo principios de mínimo impacto, gestión responsable de residuos y protección de ecosistemas andinos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col"> <!-- Tercera columna: Comunidades -->
+                        <div class="card"> <!-- Tarjeta con diseño uniforme -->
+                            <div class="card-body text-centro"> <!-- Contenido centrado -->
+                                <i class="fa-solid fa-hands-holding-circle fa-2x" style="color: #8c6239; margin-bottom: 12px;"></i>
+                                <h3 class="card-title">Impacto Comunitario</h3>
+                                <p class="card-text">Trabajamos directamente con familias anfitrionas, artesanos y arrieros locales garantizando comercio justo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer id="pie" class="padding-xl">
+        <!-- Pie de página semántico con fondo marrón corporativo y padding vertical amplio -->
+        <div class="container"> <!-- Limita el contenido a 1200px y lo centra horizontalmente en pantalla -->
+            <div class="row footer-grid"> <!-- Fila Flexbox que separa y distribuye las tres columnas del footer -->
+                <div class="col footer-col"> <!-- Primera columna flexible para la reseña informativa de la empresa -->
+                    <h3 class="footer-titulo">Horizonte Andino Tours</h3>
+                    <!-- Encabezado de nivel 3 con el nombre de la marca alineado a la izquierda -->
+                    <p class="footer-texto">
+                        <!-- Párrafo con texto blanco y altura de línea cómoda para fácil lectura -->
+                        Conectamos viajeros de todo el mundo con la riqueza cultural, histórica y natural de los Andes
+                        peruanos de forma segura y responsable.
+                    </p>
+                </div>
+
+                <div class="col footer-col"> <!-- Segunda columna flexible para el menú de navegación rápida -->
+                    <h3 class="footer-titulo">Enlaces Rápidos</h3>
+                    <!-- Encabezado de nivel 3 para la lista de enlaces de interés -->
+                    <ul class="footer-menu"> <!-- Lista sin viñetas por defecto para los accesos directos -->
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <!-- Enlace directo hacia la página de inicio -->
+                        <li><a href="nosotros.html#nosotros"><i class="fas fa-chevron-right"></i> Sobre Nosotros</a></li>
+                        <!-- Enlace hacia la presentación corporativa -->
+                        <li><a href="paquetes.html"><i class="fas fa-chevron-right"></i> Paquetes Turísticos</a></li>
+                        <!-- Enlace hacia el catálogo de rutas -->
+                        <li><a href="paquetes.html#tarifas"><i class="fas fa-chevron-right"></i> Tabla de Tarifas</a></li>
+                        <!-- Enlace hacia la comparativa de precios -->
+                        <li><a href="contacto.html#formulario"><i class="fas fa-chevron-right"></i> Contacto y Reservas</a></li>
+                        <!-- Enlace hacia el formulario de contacto -->
+                    </ul>
+                </div>
+
+                <div class="col footer-col">
+                    <!-- Tercera columna flexible para los datos directos de contacto físico y digital -->
+                    <h3 class="footer-titulo">Contáctanos</h3>
+                    <!-- Encabezado de nivel 3 para los canales oficiales de atención -->
+                    <p class="footer-contacto"> <!-- Párrafo que contiene el enlace de llamada directa con icono -->
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+51914732427">+51 914 732 427</a>
+                        <!-- Protocolo tel para iniciar llamadas directas desde teléfonos móviles -->
+                    </p>
+                    <p class="footer-contacto"> <!-- Párrafo que contiene el enlace de correo con icono de sobre -->
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@horizonteandino.com">info@horizonteandino.com</a>
+                        <!-- Protocolo mailto para abrir el gestor de correo predeterminado -->
+                    </p>
+                    <p class="footer-contacto">
+                        <!-- Párrafo con la ubicación física y el icono de marcador geográfico -->
+                        <i class="fas fa-map-marker-alt"></i> Av. Universitaria 123, Lima
+                        <!-- Dirección de la sede local de atención al cliente -->
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <!-- Barra inferior flexible separada por un borde superior tenue y espacio entre extremos -->
+                <div class="footer-copy">
+                    <!-- Texto legal del aviso de derechos reservados con entidad tipográfica copyright -->
+                    &copy; 2026 - Horizonte Andino Tours. Todos los derechos reservados.
+                </div>
+                <div class="footer-rs">
+                    <!-- Contenedor Flexbox horizontal para los accesos a redes sociales en el footer -->
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <!-- Enlace seguro a Facebook con icono vectorial y accesibilidad -->
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <!-- Enlace seguro a Instagram con icono vectorial y accesibilidad -->
+                    <a href="https://wa.me/51914732427" target="_blank" rel="noopener noreferrer"
+                        aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <!-- Enlace directo al chat de WhatsApp -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- VOLVER ARRIBA -->
+    <a class="scroll-up" href="#" title="Volver arriba">
+        <i class="fa-solid fa-angle-up"></i>
+    </a>
+
+    <!-- ENLAZAR CON JavaScript -->
+    <script src="assets/js/main.js"></script>
+
+</body> <!-- Cierre del cuerpo visible de la página -->
+
+</html> <!-- Cierre del elemento raíz del documento HTML -->

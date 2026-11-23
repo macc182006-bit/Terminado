@@ -1,0 +1,516 @@
+/* =========================================
+   DISEÑO RESPONSIVE - HORIZONTE ANDINO TOURS
+   Taller de Programación Web
+   ========================================= */
+
+/* REGLAS GENERALES */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+img, video, iframe {
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+.container {
+    width: min(100% - 40px, 1200px);
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.row > .col {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+/* NAVEGACIÓN */
+
+.header .row {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo-ancho {
+    display: block;
+    max-width: 220px;
+    height: auto;
+}
+
+.header .navegacion-principal {
+    margin-left: auto;
+}
+
+.header .nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 20px;
+}
+
+/* BOTÓN HAMBURGUESA OCULTO EN PC / LAPTOP */
+
+.header .menu-toggle,
+.header .btn-hamburguesa,
+.menu-toggle,
+.btn-hamburguesa {
+    display: none;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #79624a;
+    border-radius: 8px;
+    padding: 10px 13px;
+    color: #604531;
+    font-size: 21px;
+}
+
+/* IMÁGENES Y VIDEOS */
+
+.img-nosotros,
+.img-tarjeta,
+.img-cuadro,
+.video-local,
+.video-fluid {
+    display: block;
+    max-width: 100%;
+}
+
+.video-local,
+.video-fluid {
+    width: 100%;
+}
+
+.contenedor-iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.contenedor-iframe iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* GALERÍA CON CSS GRID */
+
+.galeria-grid,
+.galeria-flex {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.galeria-grid > .galeria-item,
+.galeria-flex > .galeria-item {
+    min-width: 0;
+    width: 100%;
+}
+
+.galeria-item .img-cuadro {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* TABLA */
+
+.table-responsive {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tbl-tarifas {
+    min-width: 620px;
+}
+
+/* FORMULARIO */
+
+.form-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.form-flex > .form-50 {
+    flex: 1 1 calc(50% - 18px);
+    min-width: 0;
+}
+
+.form-flex > .form-100 {
+    flex: 1 1 100%;
+    min-width: 0;
+}
+
+.form-control {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* PIE DE PÁGINA */
+
+.footer-grid .footer-col {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+
+/* =========================================
+   MEDIA QUERY 1 - 1200 PX
+   PANTALLAS AMPLIAS
+   ========================================= */
+
+@media (max-width: 1200px) {
+
+    .container {
+        width: min(100% - 36px, 1100px);
+    }
+
+    .header .nav-menu {
+        gap: 10px 14px;
+    }
+
+    .padding-xl {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .galeria-grid,
+    .galeria-flex {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MEDIA QUERY 2 - 992 PX
+   TABLETS Y PANTALLAS INTERMEDIAS
+   ========================================= */
+
+@media (max-width: 992px) {
+
+    .container {
+        width: min(100% - 32px, 900px);
+    }
+
+    /* BARRA SUPERIOR EN UNA SOLA LÍNEA */
+    .top-bar .container.top-bar-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .top-bar .top-bar-info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 12px;
+        margin: 0;
+        width: auto;
+        white-space: nowrap;
+        font-size: 0.85rem;
+    }
+
+    .top-bar .top-bar-social {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .header .row {
+        position: relative;
+        flex-wrap: nowrap;
+        gap: 12px;
+    }
+
+    .header .logo-ancho {
+        max-width: 185px;
+    }
+
+    /* MOSTRAR MENÚ HAMBURGUESA */
+
+    .header .menu-toggle,
+    .header .btn-hamburguesa {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+    }
+
+    .header .navegacion-principal {
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        margin: 0;
+        background: white;
+        border: 1px solid #e2d7c8;
+        border-radius: 9px;
+        box-shadow: 0 12px 25px rgba(0,0,0,.14);
+    }
+
+    .header .navegacion-principal.menu-abierto {
+        display: block;
+    }
+
+    .header .nav-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin: 0;
+        padding: 8px;
+        list-style: none;
+    }
+
+    .header .nav-menu li {
+        width: 100%;
+    }
+
+    .header .nav-menu a {
+        display: block;
+        padding: 13px 15px;
+    }
+
+    /* TARJETAS EN DOS COLUMNAS */
+
+    #valores > .container > .row > .col,
+    #paquetes > .container > .row > .col,
+    #testimonios > .container > .row > .col {
+        flex: 1 1 calc(50% - 24px);
+    }
+
+    /* GALERÍA DE DOS COLUMNAS */
+
+    .galeria-grid,
+    .galeria-flex {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* FOOTER */
+
+    .footer-grid .footer-col {
+        flex: 1 1 calc(50% - 24px);
+    }
+
+    .titulo-banner {
+        font-size: clamp(2rem, 4.4vw, 3.2rem);
+    }
+}
+
+/* =========================================
+   MEDIA QUERY 3 - 768 PX
+   MÓVILES GRANDES Y TABLETS
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: calc(100% - 28px);
+    }
+
+    .padding-xl {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    /* TODAS LAS TARJETAS EN UNA COLUMNA */
+
+    #nosotros > .container > .row > .col,
+    #multimedia > .container > .row > .col,
+    #valores > .container > .row > .col,
+    #paquetes > .container > .row > .col,
+    #testimonios > .container > .row > .col {
+        flex: 1 1 100%;
+    }
+
+    /* FORMULARIO EN UNA COLUMNA */
+
+    .form-flex > .form-50 {
+        flex: 1 1 100%;
+    }
+
+    /* PIE DE PÁGINA */
+
+    .footer-grid .footer-col {
+        flex: 1 1 100%;
+    }
+
+    /* BARRA SUPERIOR */
+
+    .top-bar-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 18px;
+    }
+
+    .top-bar-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px 15px;
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    /* GALERÍA DE DOS COLUMNAS */
+
+    .galeria-grid,
+    .galeria-flex {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* TÍTULOS */
+
+    h2 {
+        font-size: clamp(1.4rem, 4vw, 2rem);
+    }
+}
+
+
+/* =========================================
+   MEDIA QUERY 4 - 480 PX
+   CELULARES PEQUEÑOS
+   TAMBIÉN CUBRE 360 PX
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: calc(100% - 24px);
+    }
+
+    .padding-xl {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+
+    .row {
+        gap: 16px;
+    }
+
+    /* LOGOTIPO */
+
+    .header .logo-ancho {
+        max-width: 145px;
+    }
+
+    /* BOTÓN HAMBURGUESA */
+
+    .header .menu-toggle,
+    .header .btn-hamburguesa {
+        font-size: 20px;
+        padding: 9px 11px;
+    }
+
+    /* TÍTULO DE PORTADA */
+
+    .titulo-banner {
+        font-size: clamp(1.7rem, 8vw, 2.3rem);
+        line-height: 1.2;
+    }
+
+    .subtitulo-banner {
+        font-size: 0.95rem;
+    }
+
+    /* GALERÍA DE UNA COLUMNA */
+
+    .galeria-grid,
+    .galeria-flex {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    /* FORMULARIO */
+
+    .form-flex {
+        gap: 14px;
+    }
+
+    .form-control {
+        font-size: 16px;
+    }
+
+    /* BOTONES */
+
+    .btn,
+    .btn-submit {
+        max-width: 100%;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+
+    /* BARRA SUPERIOR (UNO SOBRE EL OTRO) */
+
+    .top-bar .container.top-bar-content,
+    .top-bar .top-bar-content.flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .top-bar .top-bar-info.flex,
+    .top-bar .top-bar-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    .top-bar .top-bar-social.flex,
+    .top-bar .top-bar-social {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    /* DESPLAZAMIENTO SOLO EN LA TABLA */
+
+    .tbl-tarifas {
+        min-width: 620px;
+    }
+}

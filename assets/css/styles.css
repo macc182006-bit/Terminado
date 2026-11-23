@@ -1,0 +1,1118 @@
+/* 1. VARIABLES */
+:root {
+    /* Pseudoclase raíz que almacena variables globales accesibles en todo el CSS */
+    --color-texto-principal: #2b2b2b;
+    /* Variable para el color gris oscuro de títulos y textos base */
+    --color-texto-secundario: #342519;
+    /* Variable para el tono marrón oscuro usado en párrafos descriptivos */
+    --color-fondo-claro: #f9f9f9;
+    /* Variable para fondos alternos casi blancos de secciones intermedias */
+    --color-fondo-pie: #7a5331;
+    /* Variable para el marrón corporativo del pie de página y top bar */
+    --color-fondo: #f3e9d7;
+    /* Variable para el fondo beige cálido de tarjetas y secciones */
+    --color-blanco: #ffffff;
+    /* Variable para el color blanco puro en fondos de contenedor y textos oscuros */
+    --color-borde: #eaeaea;
+    /* Variable para líneas de separación tenues entre bloques y tarjetas */
+    --color-boton: #b08968;
+    /* Variable para el color tierra principal de botones y enlaces activos */
+    --color-borde-tarifa: #dee2e6;
+    /* Variable para las líneas divisorias de las celdas de la tabla */
+
+    --fuente: "Comfortaa", sans-serif;
+    /* Variable para la familia tipográfica principal con respaldo sin serifa */
+    --tamanho-fuente: 16px;
+    /* Variable para el tamaño base de lectura del documento */
+    --radio-borde: 8px;
+    /* Variable para la curvatura uniforme de las esquinas en tarjetas e imágenes */
+}
+
+/* 2. REINICIO Y ESTILOS BASE */
+* {
+    /* Selector universal que aplica el reseteo a todas las etiquetas de la página */
+    margin: 0;
+    /* Elimina los márgenes exteriores predeterminados por el navegador */
+    padding: 0;
+    /* Elimina los rellenos internos predeterminados por el navegador */
+    box-sizing: border-box;
+    /* Asegura que el padding y los bordes se incluyan dentro del ancho total del elemento */
+}
+
+body {
+    /* Aplica las reglas tipográficas y de fondo generales a todo el cuerpo de la web */
+    font-family: var(--fuente);
+    /* Asigna la fuente Comfortaa definida en las variables globales */
+    font-size: var(--tamanho-fuente);
+    /* Establece el tamaño base de letra en 16 píxeles */
+    color: var(--color-texto-principal);
+    /* Aplica el color gris oscuro principal a los textos generales */
+    line-height: 1.6;
+    /* Define una altura de línea proporcional para mejorar la legibilidad de lectura */
+    background-color: var(--color-blanco);
+    /* Establece el fondo blanco general de la página */
+}
+
+a {
+    /* Reglas base para todos los enlaces hipertexto */
+    text-decoration: none;
+    /* Elimina el subrayado azul predeterminado de los vínculos */
+    color: inherit;
+    /* Hace que el enlace herede el color de texto del elemento que lo contiene */
+}
+
+h1,
+h2,
+h3,
+h4 {
+    /* Reglas compartidas para todos los niveles de encabezado */
+    text-align: center;
+    /* Alinea los títulos al centro por defecto */
+    font-weight: 700;
+    /* Aplica grosor de letra en negrita a todos los títulos */
+    line-height: 1.2;
+    /* Reduce el interlineado en títulos para evitar separaciones excesivas entre líneas */
+    margin-bottom: 0.5em;
+    /* Añade un espacio inferior proporcional al tamaño de la tipografía */
+}
+
+p {
+    /* Regla base para los párrafos de texto */
+    margin-bottom: 1em;
+    /* Añade una separación inferior equivalente al tamaño de fuente para separar párrafos */
+}
+
+/* 3. UTILIDADES DE MAQUETACIÓN Y ESPACIADO */
+.container {
+    /* Envoltorio principal de contenido */
+    width: 90%;
+    /* Ocupa el 90% del ancho de la pantalla en móviles para dejar márgenes de respiro */
+    max-width: 1200px;
+    /* Impide que el contenido se estire de forma excesiva en monitores anchos */
+    margin: auto;
+    /* Centra horizontalmente el bloque dentro de la ventana del navegador */
+}
+
+/* Sistema flexible de filas y columnas */
+.row {
+    /* Contenedor flexible de fila para organizar elementos en horizontal */
+    display: flex;
+    /* Activa el modelo Flexbox en sus elementos hijos directos */
+    flex-wrap: wrap;
+    /* Permite que las columnas bajen a la siguiente línea si falta espacio */
+    gap: 30px;
+    /* Añade una separación uniforme horizontal y vertical de 30 píxeles entre columnas */
+}
+
+.col {
+    /* Columna adaptable dentro de una fila */
+    flex: 1;
+    /* Hace que todas las columnas crezcan y se repartan el espacio sobrante por igual */
+    min-width: 280px;
+    /* Evita que la columna se reduzca a menos de 280px, forzando el salto de línea en móviles */
+}
+
+.align-center {
+    /* Utilidad de alineación en el eje perpendicular */
+    align-items: center;
+    /* Alinea verticalmente al centro los elementos contenidos en una fila flexible */
+}
+
+.padding-xl {
+    /* Clase utilitaria de relleno vertical amplio */
+    padding-top: 80px;
+    /* Añade un espacio interior superior de 80 píxeles a la sección */
+    padding-bottom: 80px;
+    /* Añade un espacio interior inferior de 80 píxeles a la sección */
+}
+
+.bg-light {
+    /* Utilidad de fondo alterno */
+    background-color: var(--color-fondo-claro);
+    /* Aplica el color gris muy claro definido en la variable de :root */
+}
+
+.text-centro {
+    /* Utilidad tipográfica de alineación */
+    text-align: center;
+    /* Centra el texto y los elementos inline contenidos dentro del bloque */
+}
+
+.img-fluid {
+    /* Regla para imágenes con comportamiento responsivo */
+    max-width: 100%;
+    /* Limita la imagen al ancho máximo de su contenedor padre para que nunca desborde */
+    height: auto;
+    /* Mantiene la proporción original de aspecto sin deformar la imagen */
+    display: block;
+    /* Elimina el espacio fantasma inferior predeterminado de los elementos inline */
+}
+
+/* 4. BOTONES Y COMPONENTES DE TARJETA */
+.btn {
+    /* Componente base para botones y enlaces con apariencia de botón */
+    display: inline-block;
+    /* Permite aplicar dimensiones, márgenes y rellenos comportándose en línea */
+    font-size: 18px;
+    /* Establece el tamaño de letra del botón a 18 píxeles */
+    padding: 12px 24px;
+    /* Aplica relleno interno de 12px vertical y 24px horizontal para buena área de clic */
+    font-weight: 600;
+    /* Asigna grosor seminegrita al texto del botón */
+    border-radius: 5px;
+    /* Redondea sutilmente los vértices de las esquinas */
+    text-align: center;
+    /* Centra el texto en el interior del botón */
+    background-color: var(--color-boton);
+    /* Aplica el color de fondo marrón tierra desde la variable */
+    color: var(--color-blanco);
+    /* Define el color blanco para el texto del botón */
+    border: none;
+    /* Elimina cualquier borde o contorno predeterminado del navegador */
+    transition: all 0.3s ease-in-out;
+    /* Suaviza el cambio de color y estilos durante las interacciones */
+    cursor: pointer;
+    /* Cambia el cursor a mano señaladora al pasar el ratón por encima */
+}
+
+.btn:hover {
+    /* Estado interactivo cuando el usuario coloca el puntero sobre el botón */
+    background-color: var(--color-texto-principal);
+    /* Cambia el fondo a gris oscuro contrastante */
+    color: var(--color-blanco);
+    /* Mantiene el color blanco en el texto durante el hover */
+}
+
+.card {
+    /* Componente contenedor de tarjeta para servicios, valores y testimonios */
+    background-color: var(--color-fondo);
+    /* Aplica el fondo beige cálido definido en las variables */
+    border-radius: var(--radio-borde);
+    /* Redondea las cuatro esquinas a 8 píxeles mediante variable */
+    overflow: hidden;
+    /* Oculta cualquier desborde para que las imágenes respeten las esquinas redondeadas */
+    display: flex;
+    /* Activa el modelo Flexbox interno en la tarjeta */
+    flex-direction: column;
+    /* Apila verticalmente la imagen y el cuerpo de la tarjeta */
+    height: 100%;
+    /* Fuerza a que todas las tarjetas de una misma fila tengan exactamente la misma altura */
+    border: 1px solid var(--color-borde);
+    /* Agrega un borde tenue de delimitación visual */
+}
+
+.card-body {
+    /* Contenedor interno del contenido de la tarjeta */
+    padding: 25px;
+    /* Proporciona un acolchado interior uniforme de 25 píxeles */
+    flex-grow: 1;
+    /* Permite que este bloque crezca para llenar todo el espacio vertical disponible */
+    display: flex;
+    /* Establece Flexbox para alinear verticalmente título, texto y botón */
+    flex-direction: column;
+    /* Organiza los elementos internos en una sola columna vertical */
+}
+
+.card-title {
+    /* Título de la tarjeta para nombres de tours o beneficios */
+    font-size: 1.25rem;
+    /* Establece el tamaño de letra a 20 píxeles relativos a la raíz */
+    color: var(--color-texto-principal);
+    /* Utiliza el color gris oscuro para jerarquía de título */
+    margin-bottom: 10px;
+    /* Deja una separación inferior de 10 píxeles hacia la descripción */
+}
+
+.card-text {
+    /* Párrafo explicativo dentro de la tarjeta */
+    color: var(--color-texto-secundario);
+    /* Aplica el tono marrón oscuro de lectura secundaria */
+    font-size: 0.95rem;
+    /* Reduce ligeramente el tamaño de lectura a unos 15.2 píxeles */
+    margin-bottom: 20px;
+    /* Agrega un espacio inferior de 20 píxeles antes del siguiente elemento */
+    flex-grow: 1;
+    /* Crece para empujar automáticamente el botón de reserva hacia la parte inferior */
+}
+
+.img-tarjeta {
+    /* Imagen representativa en la parte superior de cada tarjeta */
+    width: 100%;
+    /* Ocupa la totalidad del ancho disponible de la tarjeta */
+    height: 260px;
+    /* Fija una altura uniforme de 260 píxeles para todas las fotografías */
+    object-fit: cover;
+    /* Recorta la imagen proporcionalmente para que llene el recuadro sin deformarse */
+    display: block;
+    /* Elimina espacios residuales inferiores de elemento en línea */
+}
+
+/* 5. BARRA SUPERIOR Y CABECERA */
+.top-bar {
+    /* Barra superior informativa de contacto rápido y redes */
+    background-color: var(--color-fondo-pie);
+    /* Aplica el fondo marrón corporativo usando la variable global */
+    color: var(--color-blanco);
+    /* Define el color blanco para el texto e iconos */
+    font-size: 14px;
+    /* Establece un tamaño tipográfico reducido y compacto para datos secundarios */
+    padding-top: 8px;
+    /* Agrega un espaciado interno superior de 8 píxeles */
+    padding-bottom: 8px;
+    /* Agrega un espaciado interno inferior de 8 píxeles */
+}
+
+.top-bar-content {
+    /* Contenedor interno flexible de la barra superior */
+    display: flex;
+    /* Activa el modelo Flexbox para organizar la información y las redes */
+    justify-content: space-between;
+    /* Empuja los datos de contacto a la izquierda y redes a la derecha */
+    align-items: center;
+    /* Alinea verticalmente los elementos en el centro del eje secundario */
+    flex-wrap: wrap;
+    /* Permite que los bloques pasen a otra línea si el ancho de pantalla disminuye */
+    gap: 10px;
+    /* Establece una separación mínima de 10 píxeles entre los grupos flexibles */
+}
+
+.top-bar-info {
+    /* Contenedor agrupador del teléfono y correo */
+    display: flex;
+    /* Activa Flexbox para colocar el teléfono y el correo en fila horizontal */
+    gap: 20px;
+    /* Aplica una separación horizontal de 20 píxeles entre el teléfono y el correo */
+}
+
+.top-bar-info span i {
+    /* Iconos de FontAwesome dentro de la información de contacto */
+    margin-right: 5px;
+    /* Separa el icono 5 píxeles del texto contiguo para que no queden pegados */
+}
+
+.top-bar-social {
+    /* Contenedor flexible de los iconos de redes sociales */
+    display: flex;
+    /* Dispone los enlaces de redes sociales de forma horizontal */
+    gap: 15px;
+    /* Define una separación de 15 píxeles entre cada icono social */
+}
+
+.top-bar-social a {
+    /* Enlaces individuales de redes sociales en la barra superior */
+    color: var(--color-blanco);
+    /* Asigna el color blanco puro a los iconos sociales */
+    transition: color 0.3s ease;
+    /* Transición fluida de 0.3 segundos para el cambio de color al pasar el cursor */
+}
+
+.top-bar-social a:hover {
+    /* Estado de interacción al pasar el puntero sobre los iconos sociales */
+    color: var(--color-fondo);
+    /* Cambia el color del icono al beige cálido corporativo */
+}
+
+.header {
+    /* Contenedor de la cabecera principal de navegación */
+    background-color: var(--color-blanco);
+    /* Establece un fondo blanco puro para destacar sobre el contenido */
+    border-bottom: 1px solid var(--color-borde);
+    /* Agrega una línea divisoria tenue en la parte inferior */
+    padding-top: 10px;
+    /* Aplica un acolchado interior superior de 10 píxeles */
+    padding-bottom: 10px;
+    /* Aplica un acolchado interior inferior de 10 píxeles */
+}
+
+.sticky-top {
+    /* Clase de fijación superior durante el desplazamiento */
+    position: sticky;
+    /* Fija la cabecera en el borde superior al hacer scroll en la página */
+    top: 0;
+    /* Indica que la posición de anclaje adhesivo es el límite superior de la ventana */
+    z-index: 1000;
+    /* Superpone la cabecera por encima del resto del contenido de la página */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Agrega una sombra tenue para dar profundidad visual de elevación */
+}
+
+.header .row {
+    /* Fila flexible específica del encabezado */
+    align-items: center;
+    /* Alinea verticalmente al centro el logotipo y el menú de navegación */
+    justify-content: space-between;
+    /* Distribuye el logotipo al extremo izquierdo y el menú al derecho */
+}
+
+.logo-ancho {
+    /* Imagen del logotipo de la empresa */
+    width: 150px;
+    /* Fija un ancho exacto de 150 píxeles para el logotipo corporativo */
+    height: auto;
+    /* Mantiene la escala de proporción de altura de forma automática */
+    display: block;
+    /* Trata la imagen como bloque eliminando espacios inferiores no deseados */
+}
+
+.nav-menu {
+    /* Lista desordenada que conforma el menú de navegación */
+    display: flex;
+    /* Activa el modelo Flexbox para estructurar los enlaces del menú */
+    flex-direction: row;
+    /* Coloca los ítems de navegación en una fila horizontal */
+    align-items: center;
+    /* Alinea verticalmente al centro los elementos de la lista */
+    gap: 10px;
+    /* Agrega una separación de 10 píxeles entre cada botón del menú */
+    list-style: none;
+    /* Elimina las viñetas o puntos predeterminados de la lista HTML */
+}
+
+.nav-link {
+    /* Enlaces de navegación del menú principal */
+    color: var(--color-texto-principal);
+    /* Aplica el color gris oscuro principal al texto del enlace */
+    font-weight: 600;
+    /* Asigna grosor seminegrita para destacar las opciones del menú */
+    padding: 8px 14px;
+    /* Aplica relleno interno cómodo de 8px vertical y 14px horizontal para área táctil */
+    border-radius: 20px;
+    /* Redondea los bordes en forma de píldora para el área interactiva */
+    transition: all 0.3s ease;
+    /* Transición suave de 0.3 segundos para todos los cambios de propiedades */
+}
+
+.nav-link:hover {
+    /* Efecto visual al situar el puntero sobre una opción de navegación */
+    background-color: var(--color-boton);
+    /* Aplica el fondo marrón tierra de acento al enlace */
+    color: var(--color-blanco);
+    /* Cambia el color del texto a blanco puro para asegurar el contraste */
+}
+
+/* 6. BANNER HERO Y SECCIONES DE CONTENIDO */
+#explorar {
+    /* Sección hero de portada principal */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../img/fondo.jpg');
+    /* Aplica una capa oscura semitransparente sobre la imagen de fondo para garantizar contraste */
+    background-size: cover;
+    /* Escala la imagen para cubrir todo el espacio disponible sin deformarse */
+    background-position: center;
+    /* Centra la fotografía tanto horizontal como verticalmente */
+    background-repeat: no-repeat;
+    /* Evita que la imagen de fondo se repita en mosaico */
+    padding-top: 200px;
+    /* Agrega un espaciado interior superior amplio de 200 píxeles */
+    padding-bottom: 200px;
+    /* Agrega un espaciado interior inferior amplio de 200 píxeles */
+    color: var(--color-blanco);
+    /* Define el color blanco para los textos contenidos en el hero */
+}
+
+.titulo-banner {
+    /* Encabezado de nivel 1 principal dentro de la portada */
+    font-size: 42px;
+    /* Establece un tamaño tipográfico destacado de 42 píxeles para impacto visual */
+    font-weight: 700;
+    /* Aplica grosor de letra en negrita para máxima jerarquía */
+    color: var(--color-blanco);
+    /* Garantiza el texto en blanco puro sobre el fondo oscuro */
+    margin-bottom: 15px;
+    /* Deja una separación inferior de 15 píxeles hacia el subtítulo */
+}
+
+.subtitulo-banner {
+    /* Párrafo explicativo de introducción bajo el título del hero */
+    font-size: 18px;
+    /* Fija un tamaño de fuente legible de 18 píxeles */
+    font-weight: 400;
+    /* Aplica peso tipográfico normal de lectura */
+    color: var(--color-blanco);
+    /* Establece el color de texto blanco */
+    max-width: 700px;
+    /* Limita el ancho del párrafo a 700 píxeles para evitar líneas de lectura excesivamente largas */
+    margin: 0 auto 25px auto;
+    /* Centra el bloque horizontalmente con margen automático y añade 25px abajo */
+}
+
+#nosotros {
+    /* Sección informativa institucional de la empresa */
+    background-color: var(--color-fondo);
+    /* Aplica el fondo beige cálido desde la variable global */
+    color: var(--color-texto-principal);
+    /* Define el color gris oscuro para el contenido de texto */
+}
+
+.img-nosotros {
+    /* Imagen descriptiva de la sección nosotros */
+    border-radius: var(--radio-borde);
+    /* Redondea los bordes a 8 píxeles mediante variable */
+    width: 100%;
+    /* Adapta la imagen al ancho total de su columna contenedora */
+    max-height: 380px;
+    /* Limita la altura máxima a 380 píxeles para mantener proporciones en pantalla */
+    object-fit: cover;
+    /* Recorta la imagen para llenar el contenedor sin distorsionar su aspecto */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Agrega sombra difusa para otorgar efecto de profundidad */
+}
+
+#valores {
+    /* Sección de pilares y compromisos de la agencia */
+    background-color: var(--color-fondo-claro);
+    /* Establece un fondo claro alternativo para diferenciar secciones */
+}
+
+.tarjeta-valor {
+    /* Tarjetas individuales para cada pilar corporativo */
+    background-color: var(--color-fondo);
+    /* Aplica el color beige de fondo a la tarjeta */
+    border: 1px solid var(--color-borde);
+    /* Agrega una línea de borde suave para enmarcar el bloque */
+    border-radius: var(--radio-borde);
+    /* Redondea las esquinas a 8 píxeles mediante variable */
+    transition: transform 0.3s ease;
+    /* Configura una transición fluida de 0.3 segundos para animar el hover */
+}
+
+.tarjeta-valor:hover {
+    /* Efecto interactivo al pasar el cursor sobre la tarjeta de valor */
+    transform: translateY(-5px);
+    /* Eleva la tarjeta 5 píxeles verticalmente generando sensación de volumen */
+}
+
+.icon-valor {
+    /* Iconos vectoriales de FontAwesome en las tarjetas de valor */
+    color: var(--color-fondo-pie);
+    /* Aplica el tono marrón corporativo definido en variables */
+    margin-top: 10px;
+    /* Añade un espacio superior de 10 píxeles dentro de la tarjeta */
+    margin-bottom: 15px;
+    /* Separa el icono 15 píxeles respecto al título inferior */
+}
+
+#testimonios {
+    /* Sección de prueba social con opiniones de viajeros */
+    background-color: var(--color-blanco);
+    /* Establece el fondo blanco neutro para alternancia visual */
+}
+
+.tarjeta-testimonio {
+    /* Tarjeta contenedora de cada reseña de cliente */
+    border: 1px solid var(--color-borde);
+    /* Aplica un borde perimetral tenue */
+    background-color: var(--color-fondo);
+    /* Establece el fondo beige característico de los componentes */
+    text-align: center;
+    /* Centra el contenido textual dentro de la tarjeta */
+}
+
+.autor-testimonio {
+    /* Nombre y firma del cliente que brinda el testimonio */
+    font-size: 1rem;
+    /* Establece el tamaño de letra en 16 píxeles relativos */
+    font-weight: 700;
+    /* Aplica peso en negrita para resaltar la identidad del autor */
+    color: var(--color-texto-secundario);
+    /* Utiliza el tono marrón oscuro secundario */
+    margin-top: 10px;
+    /* Agrega 10 píxeles de espacio superior separando la cita de la firma */
+    margin-bottom: 0;
+    /* Elimina cualquier margen inferior sobrante */
+}
+
+/* 7. TABLA DE TARIFAS */
+.table-responsive {
+    /* Contenedor con barra de desplazamiento horizontal para pantallas móviles */
+    width: 100%;
+    /* Ocupa la totalidad del ancho de su contenedor padre */
+    overflow-x: auto;
+    /* Habilita el scroll horizontal únicamente si la tabla excede el ancho de pantalla */
+    margin-top: 30px;
+    /* Deja una separación superior de 30 píxeles respecto al texto introductorio */
+    border-radius: var(--radio-borde);
+    /* Redondea los bordes del bloque de la tabla a 8 píxeles */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    /* Aplica una sombra suave para dar sensación de relieve */
+}
+
+.tbl-tarifas {
+    /* Estilos base de la tabla comparativa de precios */
+    width: 100%;
+    /* Expande la tabla para cubrir el ancho total del contenedor responsivo */
+    border-collapse: collapse;
+    /* Une los bordes de celdas contiguas eliminando el doble borde por defecto */
+    background-color: var(--color-blanco);
+    /* Establece un fondo blanco puro para las celdas de la tabla */
+    text-align: left;
+    /* Alinea los textos de las celdas hacia la izquierda */
+}
+
+.tbl-tarifas th,
+.tbl-tarifas td {
+    /* Reglas compartidas para celdas de encabezado y datos */
+    border: 1px solid var(--color-borde-tarifa);
+    /* Aplica una línea divisoria de 1px con gris suave */
+    padding: 15px 20px;
+    /* Brinda relleno interior amplio de 15px vertical y 20px horizontal para buena legibilidad */
+}
+
+.tbl-tarifas th {
+    /* Celdas de la fila de encabezado de la tabla */
+    background-color: var(--color-fondo-pie);
+    /* Aplica el marrón corporativo como fondo de cabecera */
+    color: var(--color-blanco);
+    /* Define texto en color blanco para alto contraste sobre el fondo oscuro */
+    font-size: 15px;
+    /* Establece el tamaño de letra en 15 píxeles */
+    font-weight: 700;
+    /* Aplica peso en negrita para resaltar los títulos de columna */
+}
+
+.tbl-tarifas td {
+    /* Celdas de datos con el detalle de las rutas */
+    font-size: 14px;
+    /* Fija el tamaño de letra a 14 píxeles para una lectura compacta y clara */
+    color: var(--color-texto-principal);
+    /* Utiliza el color gris oscuro para el contenido de los paquetes */
+}
+
+.tbl-tarifas tbody tr:nth-child(even) {
+    /* Filas pares del cuerpo de la tabla */
+    background-color: var(--color-fondo-claro);
+    /* Aplica fondo alterno claro creando un patrón tipo cebra */
+}
+
+.tbl-tarifas tbody tr:hover {
+    /* Efecto visual al pasar el cursor sobre cualquier fila de datos */
+    background-color: var(--color-fondo);
+    /* Resalta la fila activa con el tono beige cálido corporativo */
+    transition: background-color 0.3s ease;
+    /* Transición fluida de 0.3 segundos al cambiar el color de fondo */
+}
+
+.text-check {
+    /* Iconos de verificación dentro de la tabla */
+    color: #2b7a4b;
+    /* Asigna un color verde natural para indicar confirmación de servicios incluidos */
+    margin-right: 5px;
+    /* Separa el icono 5 píxeles del texto contiguo "Sí" */
+}
+
+/* 8. GALERÍA MULTIFILA CON FLEXBOX */
+#galeria {
+    /* Sección de galería fotográfica de destinos */
+    background-color: var(--color-fondo-claro);
+    /* Aplica el fondo claro tenue para diferenciarla del bloque contiguo */
+}
+
+/* Galería base con CSS Grid (escritorio: 3 columnas) */
+.galeria-grid,
+.galeria-flex {
+    display: grid;
+    /* Activa el diseño en cuadrícula CSS Grid */
+    grid-template-columns: repeat(3, 1fr);
+    /* Distribuye tres columnas iguales en pantallas de escritorio */
+    gap: 20px;
+    /* Establece una separación constante de 20 píxeles entre filas y columnas */
+    margin-top: 30px;
+    /* Agrega un margen superior de 30 píxeles respecto al título de la galería */
+}
+
+.galeria-grid > .galeria-item,
+.galeria-flex > .galeria-item {
+    width: 100%;
+    /* Ocupa todo el ancho disponible de su celda en la cuadrícula */
+    flex: none;
+    /* Desactiva comportamientos residuales de Flexbox */
+    background-color: #ffffff;
+    /* Fondo blanco limpio para integrar la fotografía con el texto del lugar */
+    border: 1px solid #e6dccd;
+    /* Borde suave en tono cálido acorde a la paleta del sitio */
+    border-radius: 10px;
+    /* Redondea las esquinas de cada tarjeta de destino */
+    overflow: hidden;
+    /* Recorta el zoom de la imagen para que no sobresalga del marco */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    /* Añade una sombra ligera para dar profundidad visual */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    /* Suaviza el movimiento y la sombra al pasar el cursor */
+}
+
+.galeria-grid > .galeria-item:hover,
+.galeria-flex > .galeria-item:hover {
+    transform: translateY(-4px);
+    /* Eleva levemente la tarjeta completa al pasar el cursor */
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+    /* Refuerza la sombra en estado hover */
+}
+
+.galeria-item .img-cuadro {
+    /* Imagen dentro del marco de la galería */
+    width: 100%;
+    /* Ajusta el ancho de la fotografía al 100% de su marco contenedor */
+    height: 260px;
+    /* Fija una altura uniforme de 260 píxeles para mantener simetría visual */
+    object-fit: cover;
+    /* Evita que la fotografía se deforme rellenando todo el marco proporcionalmente */
+    display: block;
+    /* Elimina el espaciado inferior residual característico de los elementos en línea */
+    transition: transform 0.4s ease;
+    /* Transición fluida de 0.4 segundos para suavizar el efecto de escala */
+}
+
+.galeria-item:hover .img-cuadro {
+    /* Interacción cuando el usuario coloca el cursor sobre el marco */
+    transform: scale(1.05);
+    /* Aplica un acercamiento del 5% a la imagen creando un efecto interactivo de zoom */
+}
+
+.galeria-info {
+    /* Bloque inferior de información dentro de cada tarjeta de la galería */
+    padding: 14px 16px;
+    /* Agrega espacio interior alrededor del nombre del lugar y su descripción */
+}
+
+.galeria-lugar {
+    /* Título o etiqueta con el nombre del destino y su ícono */
+    display: inline-flex;
+    /* Alinea el ícono de ubicación junto al nombre del lugar */
+    align-items: center;
+    /* Centra verticalmente el ícono y el texto */
+    gap: 6px;
+    /* Separa el ícono del nombre del lugar */
+    font-weight: 700;
+    /* Resalta el nombre del destino */
+    font-size: 0.98rem;
+    /* Tamaño de lectura claro */
+    color: #5a3c24;
+    /* Aplica el tono marrón corporativo */
+    margin-bottom: 6px;
+    /* Separa el lugar de la descripción inferior */
+}
+
+.galeria-desc {
+    /* Breve reseña de lo que ofrece cada destino */
+    margin: 0;
+    /* Elimina márgenes por defecto del párrafo */
+    font-size: 0.88rem;
+    /* Tamaño compacto para mantener la tarjeta equilibrada */
+    line-height: 1.45;
+    /* Altura de línea cómoda para leer */
+    color: #555555;
+    /* Gris oscuro suave para facilitar la lectura */
+}
+
+/* Tablets / pantallas intermedias (2 columnas) */
+@media (max-width: 992px) {
+    .galeria-grid,
+    .galeria-flex {
+        grid-template-columns: repeat(2, 1fr);
+        /* Cambia a dos columnas en tablets y pantallas intermedias */
+        gap: 18px;
+        /* Ajusta ligeramente la separación entre tarjetas */
+    }
+}
+
+/* Celulares pequeños / 480px y 360px (1 columna) */
+@media (max-width: 480px) {
+    .galeria-grid,
+    .galeria-flex {
+        grid-template-columns: 1fr;
+        /* Apila las tarjetas en una sola columna en móviles pequeños */
+        gap: 14px;
+        /* Reduce el espaciado para aprovechar mejor el ancho reducido */
+    }
+}
+
+/* 9. RECURSOS MULTIMEDIA */
+
+/* Tarjeta contenedora para los reproductores de video (local y YouTube) */
+.tarjeta-video {
+    background-color: var(--color-blanco);
+    /* Aplica fondo blanco puro para destacar del fondo de la sección */
+    border: 1px solid var(--color-borde);
+    /* Añade un contorno tenue para delimitar el bloque */
+    border-radius: var(--radio-borde);
+    /* Redondea las esquinas a 8px manteniendo la identidad del sitio */
+}
+
+/* Alinea la altura del texto para que los videos comiencen exactamente al mismo nivel */
+.tarjeta-video .card-text {
+    flex-grow: 0;
+    /* Impide que el párrafo se estire de forma irregular dentro del contenedor flexible */
+    min-height: 48px;
+    /* Reserva el espacio vertical equivalente a 2 líneas de texto para nivelar las tarjetas */
+    margin-bottom: 15px;
+    /* Separa el párrafo descriptivo 15px del reproductor de video inferior */
+}
+
+/* Fuerza el mismo formato panorámico (16:9) al reproductor de video local HTML5 */
+.video-local {
+    width: 100%;
+    /* Expande el reproductor para ocupar el 100% del ancho disponible de la tarjeta */
+    aspect-ratio: 16 / 9;
+    /* Bloquea la proporción panorámica nativa 16:9 de forma responsiva */
+    object-fit: cover;
+    /* Recorta y ajusta el video al marco para evitar franjas negras si no coincide la relación */
+    border-radius: var(--radio-borde);
+    /* Redondea los bordes del video para encajar con el diseño */
+    display: block;
+    /* Elimina espacios residuales inferiores propios de elementos en línea */
+    background-color: #000;
+    /* Define fondo negro previo a la carga o durante pausas del video */
+}
+
+/* Envoltorio estructural para el reproductor incrustado externo */
+.contenedor-iframe {
+    width: 100%;
+    /* Asegura que el marco ocupe todo el ancho de la tarjeta */
+    position: relative;
+    /* Define contexto de posicionamiento relativo para elementos hijos */
+}
+
+/* Fuerza el mismo formato panorámico (16:9) al iframe incrustado de YouTube */
+.video-fluid {
+    width: 100%;
+    /* Ajusta el ancho del iframe al 100% de su contenedor */
+    height: auto;
+    /* Permite que la altura se calcule automáticamente en función del aspect-ratio */
+    aspect-ratio: 16 / 9;
+    /* Mantiene la misma relación panorámica 16:9 que el video local */
+    border: 0;
+    /* Elimina cualquier borde o contorno predeterminado del navegador para el iframe */
+    border-radius: var(--radio-borde);
+    /* Redondea las esquinas del reproductor a 8px */
+    display: block;
+    /* Elimina el espaciado vertical residual en la base del marco */
+}
+
+/* 10. FORMULARIO DE CONTACTO */
+#formulario {
+    /* Sección completa de atención al cliente y reservas */
+    background-color: var(--color-fondo);
+    /* Aplica el fondo beige cálido corporativo desde la variable global */
+    color: var(--color-texto-principal);
+    /* Define el color gris oscuro para los encabezados de la sección */
+}
+
+.contacto-form {
+    /* Tarjeta contenedora principal del formulario */
+    max-width: 800px;
+    /* Limita el ancho a 800 píxeles para mantener proporciones compactas de lectura */
+    margin: 30px auto 0 auto;
+    /* Deja 30 píxeles arriba y centra horizontalmente el formulario */
+    background-color: var(--color-blanco);
+    /* Establece un fondo blanco puro que resalta sobre el beige de la sección */
+    padding: 35px;
+    /* Aplica un acolchado interior generoso de 35 píxeles alrededor de los campos */
+    border-radius: var(--radio-borde);
+    /* Redondea los bordes a 8 píxeles manteniendo la identidad de diseño */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* Proporciona una sombra difusa suave para lograr efecto de elevación */
+}
+
+.form-flex {
+    /* Contenedor flexible para estructurar la cuadrícula de campos */
+    display: flex;
+    /* Activa el modelo Flexbox para posicionar los campos en filas y columnas */
+    flex-wrap: wrap;
+    /* Permite el salto de fila automático para distribuir elementos de ancho variable */
+    margin: -10px;
+    /* Compensa con margen negativo los márgenes internos de 10px de cada campo hijo */
+}
+
+.form-50 {
+    /* Columna de medio ancho para campos paralelos */
+    flex: 0 0 50%;
+    /* Fija un ancho exacto del 50% sin permitir crecimiento ni encogimiento flexible */
+    padding: 10px;
+    /* Aplica un espaciado perimetral de 10 píxeles para separar los campos entre sí */
+}
+
+.form-100 {
+    /* Fila de ancho completo para textarea, checkbox y botón de envío */
+    flex: 0 0 100%;
+    /* Ocupa la totalidad del ancho horizontal del contenedor */
+    padding: 10px;
+    /* Aplica un espaciado perimetral constante de 10 píxeles */
+}
+
+.form-label {
+    /* Etiquetas descriptivas sobre cada campo de entrada */
+    display: block;
+    /* Fuerza a la etiqueta a ocupar su propia línea sobre el campo */
+    font-size: 14px;
+    /* Establece un tamaño tipográfico claro de 14 píxeles */
+    font-weight: 700;
+    /* Aplica grosor de letra en negrita para jerarquía visual */
+    margin-bottom: 6px;
+    /* Separa la etiqueta 6 píxeles del campo inferior */
+    color: var(--color-texto-principal);
+    /* Utiliza el color gris oscuro para garantizar legibilidad */
+}
+
+.form-control {
+    /* Estilos compartidos para input, select y textarea */
+    width: 100%;
+    /* Expande el control para llenar todo el ancho de su columna contenedora */
+    padding: 12px;
+    /* Brinda relleno interior cómodo de 12 píxeles para facilitar la escritura táctil */
+    border: 1px solid var(--color-borde);
+    /* Agrega un borde tenue de 1 píxel para delimitar el campo */
+    border-radius: 5px;
+    /* Redondea suavemente los vértices de las esquinas */
+    font-family: inherit;
+    /* Hereda la tipografía Comfortaa configurada en el elemento body */
+    font-size: 15px;
+    /* Fija un tamaño de fuente de 15 píxeles para lectura cómoda al escribir */
+    background-color: var(--color-fondo-claro);
+    /* Establece un fondo gris muy claro por defecto */
+    transition: all 0.3s ease;
+    /* Transición fluida de 0.3 segundos para los cambios de color y foco */
+}
+
+/* Resalta visualmente los campos que no pasaron la validación JavaScript */
+.campo-invalido {
+    border-color: #b33a2b; /* Borde rojizo de advertencia */
+    outline: 2px solid rgba(179, 58, 43, 0.25); /* Resplandor suave alrededor del campo */
+}
+
+.form-control:focus {
+    /* Estado activo cuando el usuario hace clic o selecciona el campo */
+    outline: none;
+    /* Elimina el contorno azul o negro predeterminado por el navegador */
+    border-color: var(--color-boton);
+    /* Resalta el borde activo con el marrón tierra corporativo */
+    background-color: var(--color-blanco);
+    /* Cambia el fondo a blanco puro para mejorar el contraste de captura */
+}
+
+.form-noresize {
+    /* Modificador de comportamiento para el área de texto */
+    resize: none;
+    /* Bloquea el redimensionamiento manual por el usuario para evitar desbordes visuales */
+}
+
+.form-checkbox {
+    /* Contenedor flexible de la casilla de términos y condiciones */
+    display: flex;
+    /* Activa Flexbox para alinear la casilla y el texto en la misma línea */
+    align-items: center;
+    /* Centra verticalmente el selector con respecto al texto de la etiqueta */
+    gap: 10px;
+    /* Separa 10 píxeles la casilla de verificación del texto descriptivo */
+    font-size: 14px;
+    /* Establece un tamaño de letra adecuado para textos legales secundarios */
+}
+
+.form-checkbox input {
+    /* Selector interactivo de casilla */
+    cursor: pointer;
+    /* Cambia el cursor a mano interactiva al situarse sobre la casilla */
+}
+
+.btn-submit {
+    /* Botón principal de procesamiento del formulario */
+    width: 100%;
+    /* Expande el botón para abarcar el ancho total del formulario */
+    padding: 14px;
+    /* Aplica un relleno vertical generoso de 14 píxeles para máxima facilidad de clic */
+    border: none;
+    /* Elimina cualquier borde nativo del botón */
+}
+
+/* 11. PIE DE PÁGINA (Footer) */
+#pie {
+    /* Contenedor semántico principal del pie de página */
+    background-color: var(--color-fondo-pie);
+    /* Aplica el color marrón corporativo oscuro como fondo general */
+    color: var(--color-blanco);
+    /* Define texto en color blanco para asegurar contraste óptimo */
+}
+
+.footer-grid {
+    /* Fila Flexbox que organiza las columnas de contenido */
+    justify-content: space-between;
+    /* Distribuye las 3 columnas separándolas hacia los extremos disponibles */
+}
+
+.footer-col {
+    /* Columna individual del pie de página */
+    min-width: 250px;
+    /* Asegura un ancho mínimo de 250px para forzar el salto de línea en pantallas pequeñas */
+}
+
+.footer-titulo {
+    /* Encabezado de nivel 3 dentro de cada columna */
+    font-size: 18px;
+    /* Establece el tamaño de letra del título a 18 píxeles */
+    color: var(--color-blanco);
+    /* Mantiene el color blanco puro en el encabezado */
+    text-align: left;
+    /* Sobrescribe la alineación centrada global para alinear títulos a la izquierda */
+    margin-bottom: 15px;
+    /* Deja una separación inferior de 15 píxeles respecto a los enlaces o párrafos */
+}
+
+.footer-texto {
+    /* Párrafo informativo sobre la propuesta de la agencia */
+    font-size: 14px;
+    /* Fija un tamaño compacto de 14 píxeles para texto complementario */
+    color: var(--color-blanco);
+    /* Establece el color de fuente en blanco puro */
+    line-height: 1.6;
+    /* Proporciona un interlineado amplio que mejora la lectura */
+}
+
+.footer-menu {
+    /* Lista desordenada para los enlaces rápidos de navegación */
+    list-style: none;
+    /* Elimina las viñetas o puntos predeterminados del navegador */
+}
+
+.footer-menu li {
+    /* Cada elemento de la lista del menú de pie de página */
+    margin-bottom: 8px;
+    /* Agrega 8 píxeles de separación vertical hacia el siguiente enlace */
+}
+
+.footer-menu a {
+    /* Vínculo de navegación dentro del menú */
+    color: var(--color-blanco);
+    /* Mantiene los enlaces en color blanco por defecto */
+    font-size: 14px;
+    /* Fija el tamaño de fuente a 14 píxeles */
+    transition: color 0.3s ease;
+    /* Aplica una transición suave de 0.3 segundos para los cambios de color */
+}
+
+.footer-menu a:hover {
+    /* Interacción cuando el usuario posa el cursor sobre el enlace */
+    color: var(--color-fondo);
+    /* Cambia el texto a beige cálido para dar retroalimentación visual */
+}
+
+.footer-contacto {
+    /* Párrafos que agrupan teléfono, correo y dirección */
+    font-size: 14px;
+    /* Establece el tamaño del texto de contacto a 14 píxeles */
+    margin-bottom: 10px;
+    /* Separa 10 píxeles cada dato de atención */
+}
+
+.footer-contacto i {
+    /* Iconos de FontAwesome junto a los datos de contacto */
+    margin-right: 8px;
+    /* Separa el icono 8 píxeles del texto contiguo para que respire */
+}
+
+.footer-bottom {
+    /* Barra inferior que contiene el copyright y redes sociales */
+    margin-top: 40px;
+    /* Añade 40 píxeles de espacio superior separando el contenido del bloque inferior */
+    padding-top: 20px;
+    /* Aplica 20 píxeles de relleno interior superior */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    /* Inserta una línea divisoria blanca sutil y translúcida */
+    display: flex;
+    /* Activa el modelo Flexbox para posicionar legal y redes lado a lado */
+    justify-content: space-between;
+    /* Alinea el copyright a la izquierda y redes a la derecha */
+    align-items: center;
+    /* Centra verticalmente los elementos en el eje secundario */
+    flex-wrap: wrap;
+    /* Permite el salto de línea fluido si el ancho se reduce */
+    gap: 15px;
+    /* Define una separación mínima de 15 píxeles al quebrar de fila */
+    font-size: 13px;
+    /* Reduce la tipografía a 13 píxeles para metadatos legales */
+}
+
+.footer-rs {
+    /* Contenedor flexible de enlaces a redes sociales */
+    display: flex;
+    /* Dispone los iconos de redes sociales en fila horizontal */
+    gap: 15px;
+    /* Establece una separación de 15 píxeles entre cada icono */
+}
+
+.footer-rs a {
+    /* Enlace individual hacia redes sociales */
+    color: var(--color-blanco);
+    /* Define los iconos en blanco puro por defecto */
+    font-size: 16px;
+    /* Establece un tamaño táctil cómodo de 16 píxeles */
+    transition: color 0.3s ease;
+    /* Suaviza el cambio de color al pasar el cursor */
+}
+
+.footer-rs a:hover {
+    /* Estado hover de los iconos de redes sociales */
+    color: var(--color-fondo);
+    /* Cambia al tono beige cálido corporativo al interactuar */
+}
+
+/*BOTON DE SCROLL*/
+.scroll-up{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    background-color: var(--color-boton);
+    color: var(--color-fondo);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 40%;
+
+    z-index: 1000;
+    transition: all 0.4s ease-in-out;
+}
+
+.scroll-up:hover{
+    transform: translateY(-8px);
+}
+
+.scroll-up[Hidden]{
+    transition: all 0.4s ease-in-out;
+    display: none; /*ALTERNA LA VISIBILIDAD DEL BOTON*/
+}
+
+/*TITULO DE PAGINA*/
+.titulo-pag{
+    background-color: var(--color-texto-secundario);
+    color: var(--color-fondo);
+    padding-top: 45px;
+    padding-bottom: 45px;
+    background-image: 
+        linear-gradient(90deg,rgba(32, 54, 70, 0.9) 0%, rgba(32, 54, 70, 0.5) 100%)
+        url("../img/trekking.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.titulo-pag h1{
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.titulo-pag a{
+    color: var(--color-fondo);
+}
+
+.titulo-pag nav{
+    margin-top: 20px;
+}
+
+/*ARREGLOS DE MAPA*/
+.mapa-fluid{
+    width: 100%;
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html> <!-- Declara el documento como HTML5 y activa el modo estándar del navegador -->
+<html lang="es"> <!-- Define el elemento raíz de la página e indica que el idioma del contenido es español -->
+
+<head> <!-- Contiene los metadatos, enlaces a fuentes, estilos y recursos no visibles en la página -->
+    <meta charset="UTF-8">
+    <!-- Define la codificación de caracteres para mostrar correctamente tildes, la letra ñ y caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajusta el ancho al dispositivo para diseño responsivo en móviles -->
+    <title>Horizonte Andino Tours | Expediciones y Turismo Responsable</title>
+    <!-- Define el título de la pestaña en el navegador y los buscadores -->
+
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Establece el icono pequeño visible en la pestaña del navegador -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Acelera la conexión previa con el servidor de fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Establece la conexión segura para descargar los archivos de tipografía -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Importa la fuente Comfortaa con grosores normal, seminegrita y negrita -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Vincula los iconos vectoriales de FontAwesome vía servidor externo CDN -->
+
+    <!---Enlazar el HTML con el favicon-->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Conecta la hoja de estilos CSS externa que diseña toda la página -->
+</head>
+
+<body> <!-- Inicia el cuerpo del documento con todo el contenido visual de la página -->
+    <!-- BARRA SUPERIOR INFORMATIVA (Top-Bar) -->
+    <div class="top-bar"> <!-- Contenedor de la barra superior oscura con datos de contacto rápido -->
+        <div class="container top-bar-content"> <!-- Centra y distribuye el contenido a los extremos con Flexbox -->
+            <div class="top-bar-info"> <!-- Agrupa el teléfono y correo con alineación horizontal y separación -->
+                <span><i class="fas fa-phone"></i> +51 914 732 427</span>
+                <!-- Muestra el icono de teléfono y el número de atención -->
+                <span><i class="fas fa-envelope"></i> info@horizonteandino.com</span>
+                <!-- Muestra el icono de sobre y el correo corporativo -->
+            </div>
+            <div class="top-bar-social"> <!-- Agrupa los accesos directos a redes sociales con Flexbox -->
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+                <!-- Enlace seguro a la página de Facebook en pestaña nueva -->
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <!-- Enlace seguro a la página de Instagram en pestaña nueva -->
+                <a href="https://wa.me/51914732427" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i
+                        class="fab fa-whatsapp"></i></a>
+                <!-- Enlace al canal de WhatsApp con icono y accesibilidad para lectores -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CABECERA Y NAVEGACIÓN ADHESIVA (Sticky-Top) -->
+    <header class="header sticky-top">
+        <!-- Cabecera principal fijada arriba al hacer scroll gracias a position sticky -->
+        <div class="container"> <!-- Limita el ancho del contenido y lo centra horizontalmente en pantalla -->
+            <div class="row align-center">
+                <!-- Fila Flexbox que alinea el logotipo y la barra de navegación al centro -->
+                      <a href="index.html" class="logo-link">
+                        <img src="assets/img/logo.png" alt="Horizonte Andino Tours" class="logo-ancho">
+                    </a>
+                <!-- Imagen del logotipo oficial con texto alternativo de accesibilidad -->
+<!-- Botón hamburguesa en tu <header> -->
+<button class="btn-hamburguesa" id="btn-menu" aria-label="Abrir menú" aria-expanded="false">
+    <i class="fas fa-bars"></i>
+</button>
+
+<!-- Contenedor de navegación -->
+<nav class="navegacion-principal" id="nav-menu">
+    <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+        <li><a href="paquetes.html" class="nav-link">Paquetes</a></li>
+        <li><a href="galeria.html" class="nav-link">Galería</a></li>
+        <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+    </ul>
+</nav>
+            </div>
+        </div>
+    </header>
+
+    <!--Contenido principal-->
+    <main>
+        <!--TITULO DE LA PAGINA-->
+        <section class="titulo-pag">
+            <div class="container">
+                <h1>Paquetes</h1>
+                <p>Mira nuestros Paquetes</p>
+                <nav>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="index.html" title="Inicio">Inicio</a> / Paquetes
+                </nav>
+            </div>
+        </section>
+
+ <!-- SERVICIOS: PAQUETES TURÍSTICOS -->
+<section id="paquetes" class="padding-xl"> <!-- Sección principal de paquetes turísticos con espaciado vertical de 80px -->
+    <div class="container"> <!-- Limita el contenido al ancho máximo de 1200px y lo centra en la ventana -->
+        <div class="text-centro"> <!-- Contenedor de texto para alinear el título y la descripción al medio -->
+            <h2>Paquetes Populares</h2> <!-- Encabezado de nivel 2 representativo de la sección de servicios -->
+            <p class="card-text">Rutas seleccionadas para vivir lo mejor del senderismo y la cultura</p> <!-- Subtítulo descriptivo que contextualiza los recorridos -->
+        </div>
+        <div class="row"> <!-- Fila Flexbox que agrupa y alinea las tres tarjetas de paquetes con separación continua -->
+            <div class="col"> <!-- Columna flexible adaptable para la primera tarjeta de tour -->
+                <div class="card"> <!-- Tarjeta contenedora con disposición en columna para mantener alturas parejas -->
+                    <img src="assets/img/trekking.jpg" alt="Trekking en la cordillera" class="img-tarjeta"> <!-- Fotografía del tour con altura fija y ajuste object-fit cover sin distorsión -->
+                    <div class="card-body text-centro"> <!-- Cuerpo interior flexible de la tarjeta con alineación de texto al centro -->
+                        <h3 class="card-title">Trekking Nevados</h3> <!-- Título de nivel 3 con el nombre específico de la ruta -->
+                        <p class="card-text">3 días de aventura cruzando abras andinas y lagunas turquesas con campamentos equipados.</p> <!-- Resumen de la experiencia que se expande para empujar el botón -->
+                        <a href="contacto.html#formulario" class="btn">Reservar Cupo</a> <!-- Enlace de acción con estilo de botón que lleva al formulario en contacto.html -->
+                    </div>
+                </div>
+            </div>
+            <div class="col"> <!-- Columna flexible adaptable para la segunda tarjeta de tour -->
+                <div class="card"> <!-- Tarjeta con bordes redondeados y estructura vertical unificada -->
+                    <img src="assets/img/tejedora.jpg" alt="Comunidad textil andina" class="img-tarjeta"> <!-- Fotografía de la actividad textil adaptada al ancho total de la tarjeta -->
+                    <div class="card-body text-centro"> <!-- Bloque interno con padding de 25px para espaciar el texto y el botón -->
+                        <h3 class="card-title">Ruta Textil y Comunitaria</h3> <!-- Título de nivel 3 para el paquete de turismo vivencial -->
+                        <p class="card-text">Convive con artesanas de telares tradicionales y aprende técnicas milenarias de teñido natural.</p> <!-- Descripción del itinerario cultural y comunitario -->
+                        <a href="contacto.html#formulario" class="btn">Reservar Cupo</a> <!-- Botón interactivo con efecto hover suave que lleva al formulario en contacto.html -->
+                    </div>
+                </div>
+            </div>
+            <div class="col"> <!-- Columna flexible adaptable para la tercera tarjeta de tour -->
+                <div class="card"> <!-- Tarjeta de servicio con fondo cálido y borde definido -->
+                    <img src="assets/img/gastronomia.jpg" alt="Platos típicos andinos" class="img-tarjeta"> <!-- Fotografía culinaria optimizada para encajar sin deformarse -->
+                    <div class="card-body text-centro"> <!-- Contenedor de contenido textual con alineación centrada -->
+                        <h3 class="card-title">Experiencia Gastronómica</h3> <!-- Título de nivel 3 enfocado en el recorrido culinario -->
+                        <p class="card-text">Degustación de insumos nativos, hierbas aromáticas y comida ancestral en valles sagrados.</p> <!-- Descripción del servicio de cata e historia gastronómica -->
+                        <a href="contacto.html#formulario" class="btn">Reservar Cupo</a> <!-- Botón de llamada a la acción enlazado al formulario en contacto.html -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer id="pie" class="padding-xl">
+        <!-- Pie de página semántico con fondo marrón corporativo y padding vertical amplio -->
+        <div class="container"> <!-- Limita el contenido a 1200px y lo centra horizontalmente en pantalla -->
+            <div class="row footer-grid"> <!-- Fila Flexbox que separa y distribuye las tres columnas del footer -->
+                <div class="col footer-col"> <!-- Primera columna flexible para la reseña informativa de la empresa -->
+                    <h3 class="footer-titulo">Horizonte Andino Tours</h3>
+                    <!-- Encabezado de nivel 3 con el nombre de la marca alineado a la izquierda -->
+                    <p class="footer-texto">
+                        <!-- Párrafo con texto blanco y altura de línea cómoda para fácil lectura -->
+                        Conectamos viajeros de todo el mundo con la riqueza cultural, histórica y natural de los Andes
+                        peruanos de forma segura y responsable.
+                    </p>
+                </div>
+
+                <div class="col footer-col"> <!-- Segunda columna flexible para el menú de navegación rápida -->
+                    <h3 class="footer-titulo">Enlaces Rápidos</h3>
+                    <!-- Encabezado de nivel 3 para la lista de enlaces de interés -->
+                    <ul class="footer-menu"> <!-- Lista sin viñetas por defecto para los accesos directos -->
+                        <li><a href="#explorar"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                        <!-- Enlace directo con icono de flecha hacia el banner de portada -->
+                        <li><a href="#nosotros"><i class="fas fa-chevron-right"></i> Sobre Nosotros</a></li>
+                        <!-- Enlace con icono hacia la sección de presentación corporativa -->
+                        <li><a href="#paquetes"><i class="fas fa-chevron-right"></i> Paquetes Turísticos</a></li>
+                        <!-- Enlace con icono hacia el catálogo de rutas -->
+                        <li><a href="#tarifas"><i class="fas fa-chevron-right"></i> Tabla de Tarifas</a></li>
+                        <!-- Enlace con icono hacia la comparativa de precios -->
+                        <li><a href="#formulario"><i class="fas fa-chevron-right"></i> Contacto y Reservas</a></li>
+                        <!-- Enlace con icono hacia el formulario de contacto -->
+                    </ul>
+                </div>
+
+                <div class="col footer-col">
+                    <!-- Tercera columna flexible para los datos directos de contacto físico y digital -->
+                    <h3 class="footer-titulo">Contáctanos</h3>
+                    <!-- Encabezado de nivel 3 para los canales oficiales de atención -->
+                    <p class="footer-contacto"> <!-- Párrafo que contiene el enlace de llamada directa con icono -->
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+51905435005">+51 914 732 427</a>
+                        <!-- Protocolo tel para iniciar llamadas directas desde teléfonos móviles -->
+                    </p>
+                    <p class="footer-contacto"> <!-- Párrafo que contiene el enlace de correo con icono de sobre -->
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@horizonteandino.com">info@horizonteandino.com</a>
+                        <!-- Protocolo mailto para abrir el gestor de correo predeterminado -->
+                    </p>
+                    <p class="footer-contacto">
+                        <!-- Párrafo con la ubicación física y el icono de marcador geográfico -->
+                        <i class="fas fa-map-marker-alt"></i> Av. Universitaria 123, Lima
+                        <!-- Dirección de la sede local de atención al cliente -->
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <!-- Barra inferior flexible separada por un borde superior tenue y espacio entre extremos -->
+                <div class="footer-copy">
+                    <!-- Texto legal del aviso de derechos reservados con entidad tipográfica copyright -->
+                    &copy; 2026 - Horizonte Andino Tours. Todos los derechos reservados.
+                </div>
+                <div class="footer-rs">
+                    <!-- Contenedor Flexbox horizontal para los accesos a redes sociales en el footer -->
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <!-- Enlace seguro a Facebook con icono vectorial y accesibilidad -->
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <!-- Enlace seguro a Instagram con icono vectorial y accesibilidad -->
+                    <a href="https://wa.me/51914732427" target="_blank" rel="noopener noreferrer"
+                        aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <!-- Enlace directo al chat de WhatsApp -->
+                </div>
+            </div>
+    </footer>
+
+    <!--VOLVER ARRIBA-->
+    <a class="scroll-up" href="#" title="Volver arriba">
+        <i class="fa-solid fa-angle-up"></i>
+    </a>
+
+    <!--ENLAZAR CON Javascript-->
+    <script src="assets/js/main.js"></script>
+
+</body> <!-- Cierre del cuerpo visible de la página -->
+
+</html> <!-- Cierre del elemento raíz del documento HTML -->

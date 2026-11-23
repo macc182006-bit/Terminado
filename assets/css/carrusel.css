@@ -1,0 +1,174 @@
+/* =========================================================
+   CARRUSEL DE IMÁGENES - HORIZONTE ANDINO TOURS
+   Archivo: assets/css/carrusel.css
+   ========================================================= */
+
+/* Objeto carrusel: usa CSS Grid para superponer todas las
+   diapositivas en la misma celda sin desplazar el diseño */
+#carrusel {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    overflow: hidden;
+}
+
+/* Estilo base para todas las diapositivas */
+#carrusel .diapositiva {
+    position: relative;
+    grid-area: 1 / 1; /* Ubica todas las diapositivas en la misma celda */
+    height: clamp(240px, 52vw, 480px); /* Altura fluida con límites mínimo y máximo */
+    background-color: #2b2118; /* Fondo base cálido mientras carga la imagen */
+
+    /* Estados del fade: oculta por defecto y sin bloquear clics */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.5s ease, visibility 0s 0.5s;
+}
+
+/* Estado visible de la diapositiva activa */
+#carrusel .diapositiva.activa {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition-delay: 0s;
+}
+
+/* Fotografía de cada diapositiva ajustada sin deformarse */
+#carrusel .diapositiva img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Velo oscuro suave sobre la imagen para mejorar la lectura del texto centrado */
+#carrusel .diapositiva::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+}
+
+/* Texto centrado horizontal y verticalmente sobre la diapositiva */
+.carrusel-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(82%, 760px);
+    padding: 16px 48px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+    z-index: 1;
+}
+
+/* Título principal centrado de la diapositiva */
+.carrusel-texto h2 {
+    margin: 0 0 10px;
+    font-size: clamp(1.5rem, 3.8vw, 3rem);
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+/* Párrafo descriptivo centrado */
+.carrusel-texto p {
+    margin: 0 auto 18px;
+    max-width: 620px;
+    font-size: clamp(0.9rem, 1.6vw, 1.15rem);
+    line-height: 1.45;
+}
+
+/* Botón o enlace de acción centrado */
+.carrusel-texto a {
+    display: inline-block;
+    margin-top: 4px;
+    padding: 10px 22px;
+    border-radius: 6px;
+    background-color: var(--color-principal, #9e7652);
+    color: var(--color-fondo, #ffffff);
+    font-size: clamp(0.85rem, 1.3vw, 1rem);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.carrusel-texto a:hover {
+    opacity: 0.9;
+}
+
+/* Estilo base para los botones de flecha anterior y siguiente */
+.carrusel-flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.72);
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Posición de la flecha izquierda */
+#carrusel-anterior {
+    left: 10px;
+}
+
+/* Posición de la flecha derecha */
+#carrusel-siguiente {
+    right: 10px;
+}
+
+/* Barra inferior centrada de indicadores (puntos) */
+.carrusel-indicadores {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 9px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 2;
+}
+
+/* Punto indicador inactivo */
+.carrusel-punto {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Punto indicador correspondiente a la diapositiva activa */
+.carrusel-punto.activo {
+    background-color: #ffffff;
+}
+
+/* Ajustes para móviles (cubre 480px y 360px sin encimar textos ni flechas) */
+@media (max-width: 480px) {
+    #carrusel .diapositiva {
+        height: clamp(230px, 64vw, 320px);
+    }
+
+    .carrusel-texto {
+        width: calc(100% - 76px);
+        padding: 8px;
+    }
+
+    .carrusel-flecha {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+}
